@@ -2,7 +2,10 @@
 This is a website for Gospel Light Eriterian Baptist Church youth group, 220.
 
 ## Technologies Used (To be added later)
-- To be added later.
+- Vite
+- React
+  - React Router
+- Tailwind CSS
 
 ## Running Locally
 1. Clone the repository: `git clone git@github.com:220youthchurch-cloud/220-Website.git`
