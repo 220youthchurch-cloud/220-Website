@@ -18,8 +18,11 @@ const Navbar = () => {
         <div className='container-custom'>
           <div className='flex items-center justify-between py-4'>
             <Link to="/" className='flex items-center space-x-3'>
-              <img />
-              LOGO HERE
+              <img 
+              src={`${import.meta.env.BASE_URL}public/220_logo.png`} 
+              alt='220 For Life Logo'
+              className='w-16 h-16'
+              />
               <div className='flex-col'>
                 <h1 className='text-xl md:text-2xl font-heading font-bold'>220</h1>
                 <p className='text-xs md:text-sm text-neutral-600'>Youth Group</p>
