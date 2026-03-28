@@ -31,8 +31,12 @@ const Navbar = () => {
               <NavLink 
                 key={link.to}
                 to={link.to}
-                className={''}
-              
+                className={({ isActive }) =>
+                  `${isActive 
+                    ? 'text-blue-600' 
+                    : 'text-black'
+                  }`
+                }
               >
                 {link.label}
               </NavLink>
