@@ -6,7 +6,7 @@ const Navbar = () => {
   const navLinks = [
     {to: '/', label: 'Home'},
     {to: '/about', label: 'about'},
-    {to: '/ourTeam', label: 'ourTeam'},
+    {to: '/our-team', label: 'Our Team'},
     {to: '/events', label: 'events'},
     {to: '/contact', label: 'contact'},
   ]
@@ -21,13 +21,23 @@ const Navbar = () => {
               <img />
               LOGO HERE
               <div className='flex-col'>
-                <h1 className='text-xl md:text-2xl font-heading font-bold'>
-                  220
-                </h1>
-                <p>Youth Group</p>
+                <h1 className='text-xl md:text-2xl font-heading font-bold'>220</h1>
+                <p className='text-xs md:text-sm text-neutral-600'>Youth Group</p>
               </div>
             </Link>
-          </div> 
+          </div>
+          <nav className='flex items-center space-x-1 lg:space-x-2'>
+            {navLinks.map((link) => (
+              <NavLink 
+                key={link.to}
+                to={link.to}
+                className={''}
+              
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>          
         </div>
       </div>
     </>
