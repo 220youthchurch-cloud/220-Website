@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
 
+import logo from '/220_logo.png';
+
 const Navbar = () => {
   const navLinks = [
     {to: '/', label: 'Home'},
@@ -14,12 +16,12 @@ const Navbar = () => {
   
   return (
     <>
-      <div className='sticky top-0 z-50 bg-gray shadow-md'>
+      <div className='sticky top-0 z-50 bg-white shadow-md'>
         <div className='container-custom'>
-          <div className='flex items-center justify-between py-4'>
+          <div className='flex items-center text-center justify-between py-4'>
             <Link to="/" className='flex items-center space-x-3'>
               <img 
-              src={`${import.meta.env.BASE_URL}public/220_logo.png`} 
+              src={logo} 
               alt='220 For Life Logo'
               className='w-16 h-16'
               />
