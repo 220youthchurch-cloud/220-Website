@@ -25,21 +25,21 @@ const Navbar = () => {
               alt='220 For Life Logo'
               className='w-16 h-16'
               />
-              <div className='flex-col'>
-                <h1 className='text-xl md:text-2xl font-heading font-bold'>220</h1>
-                <p className='text-xs md:text-sm text-neutral-600'>Youth Group</p>
+              <div className='flex-col header-font'>
+                <h1 className='text-2xl md:text-4xl font-heading font-bold'>220</h1>
+                <p className='text-lg md:text-2xl text-neutral-600'>FOR LIFE</p>
               </div>
             </Link>
           </div>
-          <nav className='flex items-center space-x-1 lg:space-x-2'>
+          <nav className='flex-1 ml-8 flex items-center justify-end gap-10 max-w-3xl'>
             {navLinks.map((link) => (
               <NavLink 
                 key={link.to}
                 to={link.to}
                 className={({ isActive }) =>
                   `${isActive 
-                    ? 'text-blue-600' 
-                    : 'text-black'
+                      ? 'text-[#2c6598] pb-2 border-b-[3px] border-[#2c6598] px-3 transition'
+                      : 'text-black hover:text-[#2c6598] hover:border-b-[3px] border-[#f8f8f8] pb-2 px-5 transition-all duration-300 ease-in-out'
                   }`
                 }
               >

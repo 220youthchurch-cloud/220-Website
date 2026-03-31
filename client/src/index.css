@@ -5,7 +5,7 @@
 
 @layer components {
   .container-custom {
-    @apply container flex justify-between mx-auto px-4;
+    @apply w-full flex items-center justify-between px-4 sm:px-6 lg:px-10;
   }
   .video-container {
     @apply w-full h-full overflow-hidden relative;
