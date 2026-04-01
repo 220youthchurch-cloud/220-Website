@@ -20,4 +20,15 @@
   .body-font {
     @apply font-[lora];
   }
+
+  /* text colors */
+  .primary-text {
+    @apply text-[#2c6598];
+  }
+
+  .secondary-text {
+    @apply text-[#f7f7f7];
+  }
+
+  
 }
