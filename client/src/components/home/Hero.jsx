@@ -9,9 +9,9 @@ function Hero() {
       <div className='absolute inset-0 bg-black/40' />
 
       <div className='absolute inset-0 z-20 flex items-center'>
-        <div className='px-4 sm:px-6 lg:px-10 text-white max-w-3xl'>
-          <h1 className='text-4xl md:text-6xl font-bold'>Welcome to 220 Youth</h1>
-          <p className='mt-4 text-base md:text-lg'>
+        <div className='mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-10 text-white'>
+          <h1 className='header-font text-4xl md:text-6xl font-bold'>Welcome to 220 Youth</h1>
+          <p className='body-font mt-4 text-base md:text-lg'>
             Growing together in faith, community, and purpose.
           </p>
         </div>
