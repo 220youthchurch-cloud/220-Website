@@ -4,15 +4,15 @@
 
 
 @layer components {
-  .container-custom {
-    @apply w-full flex items-center justify-between px-4 sm:px-6 lg:px-10;
+
+  /* text colors */
+  .primary-text {
+    @apply text-[#2c6598];
   }
-  .video-container {
-    @apply w-full h-full overflow-hidden relative;
+  .secondary-text {
+    @apply text-[#f7f7f7];
   }
-  .video-element {
-    @apply w-full h-full object-cover absolute top-0 left-0;
-  }
+
   /* fonts */
   .header-font {
     @apply font-[lato];
@@ -21,14 +21,37 @@
     @apply font-[lora];
   }
 
-  /* text colors */
-  .primary-text {
-    @apply text-[#2c6598];
+  /* buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-[#2c6598] px-6 py-3 font-[lato] text-sm font-bold text-white transition-colors duration-200 hover:bg-[#1f5079] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c6598]/50 sm:text-base;
   }
 
-  .secondary-text {
-    @apply text-[#f7f7f7];
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full bg-[#f7f7f7] px-6 py-3 font-[lato] text-sm font-bold text-white transition-colors duration-200 hover:bg-[#1f5079] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f7f7f7]/50 sm:text-base; 
   }
 
-  
+
+  .container-custom {
+    @apply w-full flex items-center justify-between px-4 sm:px-6 lg:px-10;
+  }
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  .content-container {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-10;
+  }
+
+  .section-heading {
+    @apply font-[lato] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+  .section-body {
+    @apply font-[lora] mt-5 text-base sm:text-lg leading-8 text-slate-700;
+  }
+
+  .video-container {
+    @apply w-full h-full overflow-hidden relative;
+  }
+  .video-element {
+    @apply w-full h-full object-cover absolute top-0 left-0;
+  }
 }
