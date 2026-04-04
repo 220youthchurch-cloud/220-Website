@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../Logo';
+import SocialMediaPlatforms from '../SocialMediaPlatforms';
 
 
 const Footer = () => {
@@ -39,7 +40,10 @@ const Footer = () => {
         {/* Header */}
         <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between w-full gap-5 mb-10'>
           <Logo />
-          <p className='body-font text-[#f7f7f7] text-base leading-7'>Make Disciples<br/>Live the Mission</p>
+          <div>
+            <p className='body-font text-[#f7f7f7] text-base leading-7'>Make Disciples<br/>Live the Mission</p>
+            <SocialMediaPlatforms size="sm" />
+          </div>
         </div>
         
         {/* Quick Links */}
