@@ -23,11 +23,11 @@
 
   /* buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-[#2c6598] px-6 py-3 font-[lato] text-sm font-bold text-white transition-colors duration-200 hover:bg-[#1f5079] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c6598]/50 sm:text-base;
+    @apply inline-flex items-center justify-center rounded-full cursor-pointer bg-[#2c6598] px-6 py-3 font-[lato] text-sm font-bold text-white transition-colors duration-200 hover:bg-[#1f5079] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c6598]/50 sm:text-base;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-full bg-[#f7f7f7] px-6 py-3 font-[lato] text-sm font-bold text-white transition-colors duration-200 hover:bg-[#1f5079] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f7f7f7]/50 sm:text-base; 
+    @apply inline-flex items-center justify-center rounded-full cursor-pointer bg-[#f7f7f7] px-6 py-3 font-[lato] text-sm font-bold text-white transition-colors duration-200 hover:bg-[#1f5079] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f7f7f7]/50 sm:text-base; 
   }
 
 
