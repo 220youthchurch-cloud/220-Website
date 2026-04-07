@@ -24,9 +24,9 @@ const LatestYouTubeVideo = () => {
           <div className='mt-6 aspect-video w-full overflow-hidden rounded-2xl shadow-lg'>
             <iframe
               className='h-full w-full'
-              src={'https://www.youtube.com/embed/' + video.id + '?rel=0'}
+              src={'https://www.youtube-nocookie.com/embed/' + video.id + '?rel=0'}
               title={video.title}
-              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              loading='lazy'
               allowFullScreen
             />
           </div>
