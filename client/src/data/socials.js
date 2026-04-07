@@ -1,14 +1,14 @@
 export const socials = [
   {
-    platform: "youtube",
+    platform: "Youtube",
     link: "https://www.youtube.com/@220ForLife",
   },
   {
-    platform: "tiktok",
+    platform: "Tiktok",
     link: "https://www.tiktok.com/@220forlife_",
   },
   {
-    platform: "instagram",
+    platform: "Instagram",
     link: "https://www.instagram.com/220forlife_/"
   },  
 ];
