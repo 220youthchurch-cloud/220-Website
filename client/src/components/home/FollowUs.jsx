@@ -11,7 +11,7 @@ const FollowUs = () => {
           <p className='body-font'>Follow us on social media to stay updated.</p>
         </div>        
         <div className='w-fit'>
-          <SocialMediaPlatforms iconSize={50} className='text-white justify-around text-3xl gap-10' />
+          <SocialMediaPlatforms iconSize={50} className='text-white justify-around sm:text-1xl md:text-2xl lg:text-3xl gap-10' />
         </div>
       </div>
     </section>
