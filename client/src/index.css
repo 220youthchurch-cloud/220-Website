@@ -5,6 +5,17 @@
 
 @layer components {
 
+  .container-custom {
+    @apply w-full flex items-center justify-between px-4 sm:px-6 lg:px-10;
+  }
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  .content-container {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-10;
+  }
+
+
   /* text colors */
   .primary-text {
     @apply text-[#2c6598];
@@ -25,20 +36,8 @@
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-full cursor-pointer bg-[#2c6598] px-6 py-3 font-[lato] text-sm font-bold text-white transition-colors duration-200 hover:bg-[#1f5079] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c6598]/50 sm:text-base;
   }
-
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-full cursor-pointer bg-[#f7f7f7] px-6 py-3 font-[lato] text-sm font-bold text-white transition-colors duration-200 hover:bg-[#1f5079] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f7f7f7]/50 sm:text-base; 
-  }
-
-
-  .container-custom {
-    @apply w-full flex items-center justify-between px-4 sm:px-6 lg:px-10;
-  }
-  .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
-  }
-  .content-container {
-    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-10;
+    @apply inline-flex items-center justify-center rounded-full cursor-pointer border-2 border-[#2c6598] bg-white px-6 py-3 font-[lato] text-sm font-bold text-[#2c6598] transition-all duration-200 hover:bg-[#2c6598] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c6598]/50 sm:text-base;
   }
 
   .section-heading {
