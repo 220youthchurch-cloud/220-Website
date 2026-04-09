@@ -26,7 +26,7 @@ const SocialMediaPlatforms = ({
   const resolvedSize = iconSize ? iconSize : (size ? sizeMap[size] : sizeMap.md);
   
   return (
-    <div className={`flex flex-row items-center justify-center gap-3 ${className}`}>
+    <div className={`flex flex-row items-center ${className}`}>
       {socials.map(({ platform, link }) => {
         const Icon = iconByPlatform[platform];
         if (!Icon) return null; // platform does not have mapping
@@ -38,11 +38,11 @@ const SocialMediaPlatforms = ({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={platform}
-              className={`inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/30 text-white transition hover:border-white hover:bg-white/10 ${buttonClassName}`}
+              className={`inline-flex h-fit w-fit items-center justify-center rounded-full border p-3 border-white/30 text-white transition hover:border-white hover:bg-white/10 ${buttonClassName}`}
             >
               <Icon size={resolvedSize} />
             </a>
-            {displayTitle && <p>{platform}</p>}
+            {displayTitle && <p className='font-extrabold'>{platform}</p>}
           </div>
         )
 

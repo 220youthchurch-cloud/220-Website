@@ -15,7 +15,7 @@
 
   /* fonts */
   .header-font {
-    @apply font-[lato];
+    @apply font-[lato] font-bold;
   }
   .body-font {
     @apply font-[lora];

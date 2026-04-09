@@ -40,9 +40,9 @@ const Footer = () => {
         {/* Header */}
         <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between w-full gap-5 mb-10'>
           <Logo />
-          <div className=''>
+          <div className='flex flex-col justify-center text-center'>
             <p className='body-font text-[#f7f7f7] text-base leading-7'>Make Disciples<br/>Live the Mission</p>
-            <SocialMediaPlatforms size="sm" displayTitle={false} />
+            <SocialMediaPlatforms size="sm" className='gap-3' displayTitle={false} />
           </div>
         </div>
         
