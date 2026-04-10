@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { socials } from '../data/socials';
+import { socials } from '../../data/socials';
 
 import { FaYoutube, FaTiktok, FaInstagram } from "react-icons/fa";
 

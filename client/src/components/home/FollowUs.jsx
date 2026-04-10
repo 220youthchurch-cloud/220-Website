@@ -1,6 +1,6 @@
 import { React } from 'react'
 
-import SocialMediaPlatforms from '../SocialMediaPlatforms'  
+import SocialMediaPlatforms from '../common/SocialMediaPlatforms'  
 
 const FollowUs = () => {
   return (

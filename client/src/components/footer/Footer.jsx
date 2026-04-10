@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../Logo';
-import SocialMediaPlatforms from '../SocialMediaPlatforms';
+import Logo from '../common/Logo';
+import SocialMediaPlatforms from '../common/SocialMediaPlatforms';
 
 
 const Footer = () => {
