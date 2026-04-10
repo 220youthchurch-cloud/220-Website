@@ -1,10 +1,12 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { HiMenu, HiX } from 'react-icons/hi';
+import { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import Logo from '../Logo';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { pathname } = useLocation()
+
   const navLinks = [
     {to: '/', label: 'Home'},
     {to: '/about', label: 'about'},
@@ -12,6 +14,30 @@ const Navbar = () => {
     {to: '/events', label: 'events'},
     {to: '/contact', label: 'contact'},
   ]
+
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto'
+
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [isMenuOpen])
+
+  const desktopLinkClass = ({ isActive }) =>
+    `${isActive
+      ? 'primary-text pb-2 border-b-[3px] border-[#2c6598] px-3'
+      : 'text-black hover:text-[#2c6598] hover:border-b-[3px] border-[#f7f7f7] pb-2 px-4'
+    } transition-all duration-300 ease-in-out`
+
+  const mobileLinkClass = ({ isActive }) =>
+    `${isActive
+      ? 'bg-[#2c6598] text-white'
+      : 'text-[#10263b] hover:bg-[#e8eff6]'
+    } header-font rounded-xl px-8 py-4 text-2xl transition-colors duration-200`
 
   
   return (
