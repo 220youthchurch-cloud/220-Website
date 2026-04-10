@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import FadeIn from "../common/FadeIn"
 import { loadLatestVideo } from '../../services/youtubeService';
 
 const LatestYouTubeVideo = () => {
@@ -16,7 +17,7 @@ const LatestYouTubeVideo = () => {
   if (!video) return null;
 
   return (
-    <section className='section-padding'>
+    <FadeIn className='section-padding'>
       <div className='content-container'>
         <div className='mx-auto flex w-full max-w-4xl flex-col items-center'>
           <h2 className='section-heading primary-text'>Latest Message</h2>
@@ -36,7 +37,7 @@ const LatestYouTubeVideo = () => {
           </a>
         </div>
       </div>
-    </section>
+    </FadeIn>
   )
 }
 

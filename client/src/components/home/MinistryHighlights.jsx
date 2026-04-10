@@ -1,4 +1,5 @@
 import React from 'react'
+import FadeIn from "../common/FadeIn"
 import { Link } from 'react-router-dom'
 
 // TODO: Update these links when we create the pages
@@ -50,7 +51,7 @@ const HighlightCard = ({ title, imageUrl, to }) => {
 
 const MinistryHighlights = () => {
   return (
-    <section className='bg-white py-10'>
+    <FadeIn className='bg-white py-10'>
       <div className='content-container'>
         <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4'>
           {highlightItems.map((item) => (
@@ -63,7 +64,7 @@ const MinistryHighlights = () => {
           ))}
         </div>
       </div>
-    </section>
+    </FadeIn>
   )
 }
 

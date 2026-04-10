@@ -1,9 +1,10 @@
 import React from 'react'
+import FadeIn from "../common/FadeIn"
 import HeroVideo from './HeroVideo';
 
 function Hero() {
   return (
-    <section className='relative w-full h-screen min-h-80 max-h-190 overflow-hidden'>
+    <FadeIn className='relative w-full h-screen min-h-80 max-h-190 overflow-hidden'>
       <HeroVideo />
 
       <div className='absolute inset-0 bg-black/40' />
@@ -16,7 +17,7 @@ function Hero() {
           </p>
         </div>
       </div>
-    </section>
+    </FadeIn>
   )
 }
 

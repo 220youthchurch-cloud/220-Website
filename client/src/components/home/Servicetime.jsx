@@ -1,8 +1,10 @@
 import React from 'react'
 import { FaRegClock, FaClock } from "react-icons/fa";
+import FadeIn from "../common/FadeIn"
+
 const Servicetime = () => {
   return (
-    <section className='py-10 section-padding bg-white'>
+    <FadeIn className='py-10 section-padding bg-white'>
       <div className='flex flex-col items-center'>
         <FaRegClock size={30} />
         <div className='header-font text-[2.5rem] text-center font-extrabold gap-6'>
@@ -13,7 +15,7 @@ const Servicetime = () => {
           </a>
         </div>
       </div>
-    </section>
+    </FadeIn>
   )
 }
 
