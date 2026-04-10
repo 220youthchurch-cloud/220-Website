@@ -41,29 +41,65 @@ const Navbar = () => {
 
   
   return (
-    <>
-      <div className='sticky top-0 z-50 bg-white shadow-md'>
+    <div className='sticky top-0 z-50 bg-white shadow-md'>
+      <div className='relative z-50'>
         <div className='container-custom'>
           <Logo />
-          <nav className='flex-1 ml-8 flex items-center justify-end gap-10 max-w-3xl'>
+
+          <button
+            type='button'
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            className='md:hidden relative inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[#2c6598]/30 text-[#2c6598]'
+          >
+            <span
+              className={`absolute h-0.5 w-6 bg-current transition-transform duration-300 ${
+                isMenuOpen ? 'translate-y-0 rotate-45' : '-translate-y-2'
+              }`}
+            />
+            <span
+              className={`absolute h-0.5 w-6 bg-current transition-all duration-300 ${
+                isMenuOpen ? 'opacity-0' : 'opacity-100'
+              }`}
+            />
+            <span
+              className={`absolute h-0.5 w-6 bg-current transition-transform duration-300 ${
+                isMenuOpen ? 'translate-y-0 -rotate-45' : 'translate-y-2'
+              }`}
+            />
+          </button>
+
+          <nav className='hidden md:flex flex-1 ml-8 items-center justify-end gap-6 lg:gap-10 max-w-3xl'>
             {navLinks.map((link) => (
               <NavLink 
                 key={link.to}
                 to={link.to}
-                className={({ isActive }) =>
-                  `${isActive 
-                      ? 'primary-text pb-2 border-b-[3px] border-[#2c6598] px-3 transition'
-                      : 'text-black hover:text-[#2c6598] hover:border-b-[3px] border-[#f7f7f7] pb-2 px-5 transition-all duration-300 ease-in-out'
-                  }`
-                }
+                className={desktopLinkClass}
               >
                 {link.label}
               </NavLink>
             ))}
-          </nav>          
+          </nav>
         </div>
       </div>
-    </>
+
+      {isMenuOpen && (
+        <div className='fixed inset-0 z-40 bg-white md:hidden'>
+          <nav className='flex h-full w-full flex-col items-center justify-center gap-5 px-6'>
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={mobileLinkClass}
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
+        </div>
+      )}
+    </div>
   )
 }
 
