@@ -4,7 +4,7 @@ import Servicetime from '../components/home/Servicetime'
 import MinistryHighlights from '../components/home/MinistryHighlights'
 import WelcomeTo220 from '../components/home/WelcomeTo220'
 import Motto from '../components/home/Motto'
-import LatestYouTubeVideo from '../components/home/LatestYouTubeVideo'
+import LatestMessage from '../components/home/LatestMessage'
 import FollowUs from '../components/home/FollowUs'
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
       <MinistryHighlights />
       <WelcomeTo220 />
       <Motto />
-      <LatestYouTubeVideo />
+      <LatestMessage />
       <FollowUs />
     </>
   )
