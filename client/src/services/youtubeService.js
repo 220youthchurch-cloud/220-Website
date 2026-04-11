@@ -1,9 +1,9 @@
 const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
-const CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
+const UPLOAD_PLAYLIST_ID = import.meta.env.VITE_YOUTUBE_UPLOAD_PLAYLIST_ID;
 
 
-export async function loadLatestVideo(setVideo, setLoading, setError) {
-    if (!API_KEY || !CHANNEL_ID) {
+export async function loadYoutubeVideo(setLoading, setError, amount) {
+    if (!API_KEY || !UPLOAD_PLAYLIST_ID) {
       setError('Missing Youtube env variables.')
       setLoading(false);
       return;
@@ -12,30 +12,24 @@ export async function loadLatestVideo(setVideo, setLoading, setError) {
     try {
       const params = new URLSearchParams({
         key: API_KEY,
-        channelId: CHANNEL_ID,
+        playlistId: UPLOAD_PLAYLIST_ID,
         part: 'snippet',
-        order: 'date',
-        maxResults: '1',
-        type: 'video'
+        maxResults: amount,
       });
 
-      const res = await fetch('https://www.googleapis.com/youtube/v3/search?' + params.toString());
+      const res = await fetch('https://www.googleapis.com/youtube/v3/playlistItems?' + params.toString());
       if (!res.ok) {
         throw new Error('YouTube API failed with status ' + res.status);
       }
 
       const data = await res.json();
-      const item = data.items && data.items[0];
+      const items = data.items;
 
-      if (!item || !item.id || !item.id.videoId) {
+      if (!items || !items[0]?.snippet?.resourceId?.videoId) {
         throw new Error('No video found for this channel.');
       }
 
-      setVideo({
-        id: item.id.videoId,
-        title: item.snippet.title,
-        description: item.snippet.description
-      });
+      return items;
     } catch (e) {
       setError(e.message || 'Failed to load latest video.');
     } finally {
