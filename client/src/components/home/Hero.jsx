@@ -4,7 +4,7 @@ import HeroVideo from './HeroVideo';
 
 function Hero() {
   return (
-    <FadeIn className='relative w-full h-screen min-h-80 max-h-190 overflow-hidden'>
+    <FadeIn className='relative w-full h-screen min-h-80 max-h-215 overflow-hidden'>
       <HeroVideo />
 
       <div className='absolute inset-0 bg-black/40' />
