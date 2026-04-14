@@ -111,7 +111,7 @@ const Navbar = () => {
   
   return (
     <>
-      {!isTransparentTopMode && <div aria-hidden='true' className='h-28 md:h-32' />} // Spacer to prevent content jump when navbar becomes fixed
+      {!isTransparentTopMode && <div aria-hidden='true' className='h-28 md:h-32' />} {/* Spacer to prevent content jump when navbar becomes fixed */}
       <div className={navbarShellClass}>
         <div className='relative z-50'>
           <div className='container-custom'>
