@@ -31,34 +31,39 @@ const Navbar = () => {
   }, [isMenuOpen])
 
   useEffect(() => {
-    const minScrollDelta = 6
+    const minScrollDelta = 6 // Minimum scroll delta in pixels to trigger navbar visibility change
 
     const handleScroll = () => {
+      // Get the current scroll position
       const currentScrollY = window.scrollY
       const atTop = currentScrollY <= 8
 
       if (atTop) {
+        // Only update state if it has changed to avoid unnecessary re-renders
         setIsAtTop((prev) => (prev === true ? prev : true))
         setIsNavbarVisible((prev) => (prev === true ? prev : true))
-        lastScrollYRef.current = currentScrollY
+        lastScrollYRef.current = currentScrollY // Reset last scroll position when at the top to prevent jumpy behavior
         return
       }
 
+      // If we're not at the top, ensure the state reflects that
       setIsAtTop((prev) => (prev === false ? prev : false))
 
-      const scrollDelta = currentScrollY - lastScrollYRef.current
+      const scrollDelta = currentScrollY - lastScrollYRef.current // Only update visibility if the scroll delta exceeds the minimum threshold
 
+      // If the scroll delta is too small, don't update the navbar visibility to prevent it from toggling on minor scrolls
       if (Math.abs(scrollDelta) < minScrollDelta) {
         return
       }
 
+      // If the user scrolled down, hide the navbar; if they scrolled up, show it
       if (scrollDelta > 0) {
         setIsNavbarVisible(false)
       } else {
         setIsNavbarVisible(true)
       }
 
-      lastScrollYRef.current = currentScrollY
+      lastScrollYRef.current = currentScrollY // Update the last scroll position for the next scroll event
     }
 
     handleScroll()
@@ -93,6 +98,8 @@ const Navbar = () => {
       : 'text-[#10263b] hover:bg-[#e8eff6]'
     } header-font rounded-xl px-8 py-4 text-2xl transition-colors duration-200`
 
+  // Combine classes for the navbar shell
+  // Base styles for positioning and transitions
   const navbarShellClass = [
     'inset-x-0 z-50 transition-transform duration-300 ease-in-out',
     isTransparentTopMode
@@ -104,7 +111,7 @@ const Navbar = () => {
   
   return (
     <>
-      {!isTransparentTopMode && <div aria-hidden='true' className='h-28 md:h-32' />}
+      {!isTransparentTopMode && <div aria-hidden='true' className='h-28 md:h-32' />} // Spacer to prevent content jump when navbar becomes fixed
       <div className={navbarShellClass}>
         <div className='relative z-50'>
           <div className='container-custom'>
