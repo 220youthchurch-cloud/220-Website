@@ -3,6 +3,7 @@ import App from './App';
 /* Import all pages here */
 import Home from './pages/Home';
 import About from './pages/About'
+import Sermons from './pages/Sermons';
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: 'Events',
         element: <p>Events page here</p>
+      },
+      {
+        path: 'Sermons',
+        element: <p>Sermons page here</p>
       },
       {
         path: 'Contact',
