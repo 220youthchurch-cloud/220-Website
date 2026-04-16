@@ -28,8 +28,8 @@ export const router = createBrowserRouter([
         element: <p>Events page here</p>
       },
       {
-        path: 'Sermons',
-        element: <p>Sermons page here</p>
+        path: 'sermons',
+        element: <Sermons />
       },
       {
         path: 'Contact',
