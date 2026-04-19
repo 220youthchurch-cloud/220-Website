@@ -12,11 +12,11 @@ const Navbar = () => {
 
   const navLinks = [
     {to: '/', label: 'Home'},
-    {to: '/about', label: 'about'},
+    {to: '/about', label: 'About'},
     {to: '/our-team', label: 'Our Team'},
-    {to: '/events', label: 'events'},
-    {to: '/sermons', label: 'sermons'},
-    {to: '/contact', label: 'contact'},
+    {to: '/events', label: 'Events'},
+    {to: '/sermons', label: 'Sermons'},
+    {to: '/contact', label: 'Contact'},
   ]
 
   useEffect(() => {
