@@ -11,10 +11,10 @@ const Video = ( {videoUrl = null} ) => {
         playsInline
         className='video-element'
       >
-        <source src={video} type='video/mp4' />
+        <source src={videoUrl} type='video/mp4' />
       </video>
     </div>
   )
 }
 
-export default HeroVideo
+export default Video
