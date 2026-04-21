@@ -11,7 +11,7 @@ export const events = [
     category: "Worship",
     recurring: true,
     isVideo: false,
-    mediaPath: "/sunday_worship_service/flyer.png"
+    mediaPath: "/events/sunday_worship_service/flyer.jpg"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const events = [
     category: "Fellowship",
     recurring: false,
     isVideo: false,
-    mediaPath: "/220_wilderness_camping_trip/flyer.png"
+    mediaPath: "/events/220_wilderness_camping_trip/flyer.jpg"
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const events = [
     category: "Youth",
     recurring: false,
     isVideo: true,
-    mediaPath: "/girls_conference/girls_conference.mp4"
+    mediaPath: "/events/girls_conference/girls_conference.mp4"
   },
 ]
 
