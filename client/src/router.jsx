@@ -1,10 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 /* Import all pages here */
-import Home from './pages/Home';
+import Home from './pages/Home'
 import About from './pages/About'
-import Events from './pages/Events';
-import Sermons from './pages/Sermons';
+import Events from './pages/Events'
+import Sermons from './pages/Sermons'
 
 export const router = createBrowserRouter([
   {
@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'events',
-        element: <Events /> 
+        element: <Events />
       },
       {
         path: 'sermons',
