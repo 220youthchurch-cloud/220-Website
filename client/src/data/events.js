@@ -1,3 +1,5 @@
+import { data } from "react-router-dom"
+
 export const events = [
   {
     id: 1,
@@ -82,6 +84,48 @@ export const events = [
     recurring: false,
     isVideo: false,
     mediaPath: "/events/consecrated_2025/flyer.jpg"
+  },
+  {
+    id: 7,
+    title: "Christmas Eve 2025",
+    description: "Join us as we celebrate the true reason for the season: Jesus 🤍",
+    detailedDescription: "<h1>Christmas Eve 2025</h1><p>Join us as we celebrate the true reason for the season: Jesus 🤍</p><br/><p>'Today in the town of David a Savior has been born to you; He is the Messiah, the Lord.' Luke 2:11</p><br/><p>Come worship, play games, connect, and experience the joy of Christmas with us. Bring a friend & don’t miss it! 🎶✨",
+    date: "December 24, 2025",
+    startTime: "Dec 24 4:30 PM",
+    endTime: "Dec 24 10:00 PM",
+    location: "11110 Garland Rd, Dallas, TX 75218",
+    category: "Celebration",
+    recurring: false,
+    isVideo: false,
+    mediaPath: "/events/christmas_eve_2025/flyer.jpg"
+  },
+  {
+    id: 8,
+    title: "New Year's Eve 2026",
+    description: "Join us as we say goodbye to 2025 and welcome the new year with worship, reflection, and community! 🎉✨",
+    detailedDescription: "<h1>New Year's Eve 2026</h1><p>Join us as we say goodbye to 2025 and welcome the new year with worship, reflection, and community! 🎉✨</p><br/><p>The Lord will make a way for all. Our prayer is that we are encouraged to step into this new year with faith and not fear. What He has planned is far greater, and much bigger than what we are leaving behind.</p><br/><p>'Therefore, if anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come.' 2 Corinthians 5:17 ESV</p>",
+    date: "December 31, 2026",
+    startTime: "Dec 31 8:00 PM",
+    endTime: "Dec 31 10:00 PM",
+    location: "11110 Garland Rd, Dallas, TX 75218",
+    category: "Celebration",
+    recurring: false,
+    isVideo: false,
+    mediaPath: "/events/new_years_eve_2026/flyer.jpg"
+  },
+  {
+    id: 9,
+    title: "Spring Break Conference 2026 - IT IS WRITTEN",
+    description: "Join us for an incredible week of faith, fellowship, and fun during our Spring Break Conference!",
+    detailedDescription: "<h1>Spring Break Conference 2026 - IT IS WRITTEN</h1><p>'If You said it, we believe it.'</p><br/><p>IT IS WRITTEN📖</p><br/><p>'Man shall not live by bread alone, but by every word that proceeds from the mouth of God.' Matthew 4:4</p><br/><p>Bring a friend. Come ready. Come expecting. We can’t wait to see you there!🤍</p>",
+    date: "March 13-15, 2027",
+    startTime: "Mar 13 9:00 AM",
+    endTime: "Mar 15 5:00 PM",
+    location: "11110 Garland Rd, Dallas, TX 75218",
+    category: "Conference",
+    recurring: false,
+    isVideo: false,
+    mediaPath: "/events/spring_conference_2026/flyer.jpg"
   }
 ]
 
