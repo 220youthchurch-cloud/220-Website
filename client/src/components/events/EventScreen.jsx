@@ -82,7 +82,7 @@ const EventScreen = ({ event, onClose }) => {
               {event.isVideo ? (
                 <div className='aspect-video overflow-hidden rounded-2xl bg-slate-200'>
                   <video
-                    className='h-full w-full object-cover'
+                    className='h-full w-full object-contain bg-black'
                     src={resolvedMediaPath}
                     controls
                     playsInline
