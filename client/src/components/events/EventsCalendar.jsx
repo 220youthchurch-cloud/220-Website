@@ -5,7 +5,7 @@ import 'react-calendar/dist/Calendar.css'
 import { getEventsForDate, isEventOnDate } from '../../data/events'
 import EventsList from './EventsList'
 
-const EventsCalendar = ({ events = [] }) => {
+const EventsCalendar = ({ events = [], onEventClick }) => {
   const [selectedDate, setSelectedDate] = useState(new Date())
   const [activeStartDate, setActiveStartDate] = useState(new Date())
 
@@ -45,13 +45,23 @@ const EventsCalendar = ({ events = [] }) => {
   return (
     <div className='space-y-8'>
       <div className='rounded-2xl border border-[#dbe6ef] bg-white p-4 shadow-sm md:p-6 w-full'>
+        <div className='mb-4 flex justify-end'>
+          <button
+            type='button'
+            onClick={handleGoToToday}
+            className='btn-secondary'
+          >
+            Go to Today
+          </button>
+        </div>
+
         <Calendar
           onChange={handleDateChange}
           value={selectedDate}
           activeStartDate={activeStartDate}
           onActiveStartDateChange={handleActiveStartDateChange}
           minDetail='month'
-          className='events-calendar mx-auto w-full! border-none! body-font!'
+          className='events-calendar mx-auto w-full! border-none! body-font'
           tileClassName={({ date, view }) =>
             view === 'month' && hasEventsOnDate(date) ? 'events-calendar-has-event' : null
           }
@@ -77,6 +87,7 @@ const EventsCalendar = ({ events = [] }) => {
           <EventsList
             events={selectedDateEvents}
             emptyMessage='There are no events scheduled for this day.'
+            onEventClick={onEventClick}
           />
         </div>
       </div>

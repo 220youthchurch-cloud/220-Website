@@ -17,7 +17,7 @@ const formatTime = (event) => {
   return event.date || 'Time TBD'
 }
 
-const EventsList = ({ events = [], emptyMessage = 'There are no events scheduled.' }) => {
+const EventsList = ({ events = [], emptyMessage = 'There are no events scheduled.', onEventClick }) => {
   if (!events.length) {
     return (
       <div className='rounded-2xl border border-[#dbe6ef] bg-white p-8 text-center'>
@@ -31,26 +31,32 @@ const EventsList = ({ events = [], emptyMessage = 'There are no events scheduled
       {events.map((event) => (
         <article
           key={event.id}
-          className='rounded-2xl border border-[#dbe6ef] bg-white p-6 shadow-sm'
+          className='rounded-2xl border border-[#dbe6ef] bg-white shadow-sm'
         >
-          <div className='flex flex-wrap items-center gap-3'>
-            <span className='header-font rounded-full bg-[#e8eff6] px-3 py-1 text-sm uppercase tracking-wide text-[#2c6598]'>
-              {event.category}
-            </span>
-            <h3 className='header-font text-2xl text-[#10263b]'>{event.title}</h3>
-          </div>
+          <button
+            type='button'
+            onClick={() => onEventClick?.(event)}
+            className={`${onEventClick ? 'cursor-pointer hover:bg-[#f7fbff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c6598]/40' : ''} w-full rounded-2xl p-6 text-left transition-colors duration-200`}
+          >
+            <div className='flex flex-wrap items-center gap-3'>
+              <span className='header-font rounded-full bg-[#e8eff6] px-3 py-1 text-sm uppercase tracking-wide text-[#2c6598]'>
+                {event.category}
+              </span>
+              <h3 className='header-font text-2xl text-[#10263b]'>{event.title}</h3>
+            </div>
 
-          <p className='body-font mt-4 flex items-center gap-2 text-slate-700'>
-            <FaClock className='text-[#2c6598]' aria-hidden='true' />
-            <span>{formatTime(event)}</span>
-          </p>
+            <p className='body-font mt-4 flex items-center gap-2 text-slate-700'>
+              <FaClock className='text-[#2c6598]' aria-hidden='true' />
+              <span>{formatTime(event)}</span>
+            </p>
 
-          <p className='body-font mt-2 flex items-center gap-2 text-slate-700'>
-            <FaLocationDot className='text-[#2c6598]' aria-hidden='true' />
-            <span>{event.location || 'Location TBD'}</span>
-          </p>
+            <p className='body-font mt-2 flex items-center gap-2 text-slate-700'>
+              <FaLocationDot className='text-[#2c6598]' aria-hidden='true' />
+              <span>{event.location || 'Location TBD'}</span>
+            </p>
 
-          <p className='section-body mt-4 max-w-none'>{event.description}</p>
+            <p className='section-body mt-4 max-w-none'>{event.description}</p>
+          </button>
         </article>
       ))}
     </div>

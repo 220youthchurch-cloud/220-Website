@@ -5,12 +5,14 @@ import { FaList, FaCalendarAlt } from "react-icons/fa";
 import PageHeader from '../components/common/PageHeader'
 import EventsCalendar from '../components/events/EventsCalendar'
 import EventsList from '../components/events/EventsList'
+import EventScreen from '../components/events/EventScreen'
 import { events, getUpcomingEvents } from '../data/events'
 
 import FadeIn from '../components/common/FadeIn'
 
 const Events = () => {
   const [viewMode, setViewMode] = useState('list')
+  const [selectedEvent, setSelectedEvent] = useState(null)
   const upcomingEvents = useMemo(() => getUpcomingEvents(), [])
   const upcomingEventsCount = upcomingEvents.length
 
@@ -61,16 +63,24 @@ const Events = () => {
                 <EventsList
                   events={upcomingEvents}
                   emptyMessage='There are no events scheduled.'
+                  onEventClick={setSelectedEvent}
                 />
               </div>
             </div>
           ) : (
             <div className='mt-8'>
-              <EventsCalendar events={events} />
+              <EventsCalendar events={events} onEventClick={setSelectedEvent} />
             </div>
           )}
         </div>
       </FadeIn>
+
+      {selectedEvent && (
+        <EventScreen
+          event={selectedEvent}
+          onClose={() => setSelectedEvent(null)}
+        />
+      )}
     </>
   )
 }
