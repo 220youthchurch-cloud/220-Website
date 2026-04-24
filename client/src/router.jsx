@@ -5,6 +5,13 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Events from './pages/Events'
 import Sermons from './pages/Sermons'
+import OurTeam from './pages/OurTeam'
+import WorshipTeam from './pages/WorshipTeam'
+import TechTeam from './pages/TechTeam'
+import HospitalityTeam from './pages/HospitalityTeam'
+import OutreachTeam from './pages/OutreachTeam'
+import DiscipleshipTeam from './pages/DiscipleshipTeam'
+import PrayerTeam from './pages/PrayerTeam'
 
 export const router = createBrowserRouter([
   {
@@ -22,7 +29,31 @@ export const router = createBrowserRouter([
       },
       {
         path: 'our-team',
-        element: <p>Our Team page here</p>
+        element: <OurTeam />
+      },
+      {
+        path: 'our-team/worship-team',
+        element: <WorshipTeam />
+      },
+      {
+        path: 'our-team/tech-team',
+        element: <TechTeam />
+      },
+      {
+        path: 'our-team/hospitality-team',
+        element: <HospitalityTeam />
+      },
+      {
+        path: 'our-team/outreach-team',
+        element: <OutreachTeam />
+      },
+      {
+        path: 'our-team/discipleship-team',
+        element: <DiscipleshipTeam />
+      },
+      {
+        path: 'our-team/prayer-team',
+        element: <PrayerTeam />
       },
       {
         path: 'events',
@@ -33,7 +64,7 @@ export const router = createBrowserRouter([
         element: <Sermons />
       },
       {
-        path: 'Contact',
+        path: 'contact',
         element: <p>Contact page here</p>
       },
     ],
