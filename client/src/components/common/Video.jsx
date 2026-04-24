@@ -1,7 +1,7 @@
 import React from 'react'
 import consecratedVideo from '/events/consecrated_2025/consecrated.mp4';
 
-const HeroVideo = () => {
+const Video = ( {videoUrl = null} ) => {
   return (
     <div className='video-container'>
       <video
@@ -11,10 +11,10 @@ const HeroVideo = () => {
         playsInline
         className='video-element'
       >
-        <source src={consecratedVideo} type='video/mp4' />
+        <source src={videoUrl} type='video/mp4' />
       </video>
     </div>
   )
 }
 
-export default HeroVideo
+export default Video
