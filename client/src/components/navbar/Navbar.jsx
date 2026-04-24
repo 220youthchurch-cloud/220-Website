@@ -1,26 +1,22 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
+import { FaAngleDown } from 'react-icons/fa';
+
 import Logo from '../common/Logo';
+import { navLinks } from '../../data/navigation';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState(null)
   const [isAtTop, setIsAtTop] = useState(true)
   const [isNavbarVisible, setIsNavbarVisible] = useState(true)
   const lastScrollYRef = useRef(0)
   const { pathname } = useLocation()
 
-  const navLinks = [
-    {to: '/', label: 'Home'},
-    {to: '/about', label: 'about'},
-    {to: '/our-team', label: 'Our Team'},
-    {to: '/events', label: 'events'},
-    {to: '/sermons', label: 'sermons'},
-    {to: '/contact', label: 'contact'},
-  ]
-
   useEffect(() => {
     setIsMenuOpen(false)
+    setOpenMobileSubmenu(null)
   }, [pathname])
 
   useEffect(() => {
@@ -93,11 +89,25 @@ const Navbar = () => {
     } transition-all duration-300 ease-in-out`
   }
 
+  const desktopSubLinkClass = ({ isActive }) => {
+    if (isTransparentTopMode) {
+      return `${isActive
+        ? 'bg-white/20 text-white'
+        : 'text-white/90 hover:bg-white/15 hover:text-white'
+      } block rounded-md px-4 py-2 text-sm header-font transition-colors duration-200`
+    }
+
+    return `${isActive
+      ? 'bg-[#e8eff6] text-[#2c6598]'
+      : 'text-[#10263b] hover:bg-[#e8eff6] hover:text-[#2c6598]'
+    } block rounded-md px-4 py-2 text-sm header-font transition-colors duration-200`
+  }
+
   const mobileLinkClass = ({ isActive }) =>
     `${isActive
       ? 'bg-[#2c6598] text-white'
       : 'text-[#10263b] hover:bg-[#e8eff6]'
-    } header-font rounded-xl px-8 py-4 text-2xl transition-colors duration-200`
+    } header-font w-full rounded-xl px-5 py-4 text-left text-xl sm:text-2xl transition-colors duration-200`
 
   // Combine classes for the navbar shell
   // Base styles for positioning and transitions
@@ -107,7 +117,7 @@ const Navbar = () => {
       ? 'absolute top-0 bg-gradient-to-b from-black/65 via-black/30 to-transparent'
       : 'fixed top-0 bg-white shadow-md',
     !isAtTop && !showNavbar ? '-translate-y-full' : 'translate-y-0',
-  ].join(' ')
+  ].join(' ') // Join the array into a single string of classes
 
   
   return (
@@ -118,6 +128,7 @@ const Navbar = () => {
           <div className='container-custom'>
             <Logo isLarge={isAtTop} isOnDarkBackground={isTransparentTopMode} />
 
+            {/* Hamburger menu button for mobile */}
             <button
               type='button'
               onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -146,31 +157,119 @@ const Navbar = () => {
             </button>
 
             <nav className='hidden md:flex flex-1 ml-8 items-center justify-end gap-6 lg:gap-10 max-w-3xl'>
-              {navLinks.map((link) => (
-                <NavLink 
-                  key={link.to}
-                  to={link.to}
-                  className={desktopLinkClass}
-                >
-                  {link.label}
-                </NavLink>
-              ))}
+              {navLinks.map((link) => {
+                if (!link.subsections) {
+                  return (
+                    <NavLink
+                      key={link.to}
+                      to={link.to}
+                      className={desktopLinkClass}
+                    >
+                      {link.label}
+                    </NavLink>
+                  )
+                }
+
+                return (
+                  <div key={link.to} className='group relative'>
+                    {/* Main link */}
+                    <NavLink
+                      to={link.to}
+                      className={desktopLinkClass}
+                    >
+                      {link.label}
+                    </NavLink>
+
+                    {/* Submenu */}
+                    <div className='absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 ease-out'>
+                      <div
+                        className={`${isTransparentTopMode
+                          ? 'border border-white/25 bg-black/75 backdrop-blur-md'
+                          : 'border border-gray-200 bg-white shadow-xl'
+                        } min-w-55 rounded-xl p-2`}
+                      >
+                        {link.subsections.map((subsection) => (
+                          <NavLink
+                            key={subsection.to}
+                            to={subsection.to}
+                            className={desktopSubLinkClass}
+                          >
+                            {subsection.label}
+                          </NavLink>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )
+              })}
             </nav>
           </div>
         </div>
       </div>
 
+      {/* Mobile menu overlay */}
       {isMenuOpen && (
         <div className='fixed inset-0 z-40 bg-white md:hidden'>
-          <nav className='flex h-full w-full flex-col items-center justify-center gap-5 px-6'>
+          <nav className='flex h-full w-full flex-col items-stretch justify-center gap-4 px-6'>
             {navLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                className={mobileLinkClass}
-              >
-                {link.label}
-              </NavLink>
+              <div key={link.to} className='w-full'>
+                <div className='flex w-full items-center gap-2'>
+                  <NavLink
+                    to={link.to}
+                    className={mobileLinkClass}
+                  >
+                    {link.label}
+                  </NavLink>
+
+                  {link.subsections && (
+                    <button
+                      type='button'
+                      onClick={() =>
+                        setOpenMobileSubmenu((prev) => (prev === link.to ? null : link.to))
+                      }
+                      aria-expanded={openMobileSubmenu === link.to}
+                      aria-label={`Toggle ${link.label} subsections`}
+                      className='inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[#c5d8e8] text-[#2c6598] transition-colors duration-200 hover:bg-[#e8eff6]'
+                    >
+                      <FaAngleDown
+                        className={`text-xl transition-transform duration-200 ${
+                          openMobileSubmenu === link.to ? 'rotate-180' : 'rotate-0'
+                        }`}
+                      />
+                    </button>
+                  )}
+                </div>
+                
+                {/* Submenu for mobile - collapsible */}
+                {link.subsections && (
+                  <div
+                    className={`grid overflow-hidden transition-all duration-300 ${
+                      openMobileSubmenu === link.to
+                        ? 'grid-rows-[1fr] opacity-100 mt-2'
+                        : 'grid-rows-[0fr] opacity-0'
+                    }`}
+                  >
+                    <div className='min-h-0 overflow-hidden'>
+                      <div className='grid w-full gap-2 rounded-2xl bg-[#f3f7fb] p-3'>
+                        {link.subsections.map((subsection) => (
+                          <NavLink
+                            key={subsection.to}
+                            to={subsection.to}
+                            className={({ isActive }) =>
+                              `${isActive
+                                ? 'bg-[#2c6598] text-white'
+                                : 'text-[#10263b] hover:bg-[#e8eff6]'
+                              } header-font w-full rounded-lg px-4 py-3 text-left text-sm transition-colors duration-200`
+                            }
+                          >
+                            {subsection.label}
+                          </NavLink>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
         </div>
