@@ -1,3 +1,18 @@
+export const aboutSubsections = [
+  {
+    to: '/about/our-story',
+    label: 'Our Story',
+  },
+  {
+    to: '/about/mission-vision',
+    label: 'Mission & Vision',
+  },
+  {
+    to: '/about/beliefs',
+    label: 'Beliefs',
+  },
+]
+
 export const ourTeamSubsections = [
   {
     to: '/our-team/worship-team',
@@ -33,6 +48,7 @@ export const navLinks = [
   {
     to: '/about',
     label: 'About',
+    subsections: aboutSubsections,
   },
   {
     to: '/our-team',

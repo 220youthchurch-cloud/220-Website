@@ -5,6 +5,9 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Events from './pages/Events'
 import Sermons from './pages/Sermons'
+import OurStory from './components/home/OurStory'
+import MissionVision from './components/home/MissionVision'
+import Beliefs from './pages/Beliefs'
 import OurTeam from './pages/OurTeam'
 import WorshipTeam from './pages/WorshipTeam'
 import TechTeam from './pages/TechTeam'
@@ -26,6 +29,18 @@ export const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />
+      },
+      {
+        path: 'about/our-story',
+        element: <OurStory />
+      },
+      {
+        path: 'about/mission-vision',
+        element: <MissionVision />
+      },
+      {
+        path: 'about/beliefs',
+        element: <Beliefs />
       },
       {
         path: 'our-team',
