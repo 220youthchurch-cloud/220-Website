@@ -129,6 +129,7 @@ const Navbar = () => {
             <Logo isLarge={isAtTop} isOnDarkBackground={isTransparentTopMode} />
 
             {/* Hamburger menu button for mobile */}
+            {/* Hide on medium and larger screens */}
             <button
               type='button'
               onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -155,7 +156,9 @@ const Navbar = () => {
                 }`}
               />
             </button>
-
+            
+            {/* Navigation links for desktop */}
+            {/* Hide on small screens */}
             <nav className='hidden md:flex flex-1 ml-8 items-center justify-end gap-6 lg:gap-10 max-w-3xl'>
               {navLinks.map((link) => {
                 if (!link.subsections) {
