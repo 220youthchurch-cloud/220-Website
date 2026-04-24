@@ -2,7 +2,7 @@ import React from 'react'
 
 const PageHeader = ({ title, description, className = '' }) => {
   return (
-    <header className={`relative overflow-hidden bg-[#f3f7fb] section-padding ${className}`}>
+    <header className={`relative overflow-hidden bg-[#f3f7fb] py-8 md:py-16 lg:py-20 ${className}`}>
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(44,101,152,0.2),transparent_55%)]' />
 
       <div className='content-container relative z-10'>

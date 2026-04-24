@@ -1,11 +1,12 @@
 import React from 'react'
 import FadeIn from "../common/FadeIn"
-import HeroVideo from './HeroVideo';
+import consecratedVideo from '/events/consecrated_2025/consecrated.mp4';
+import Video from '../common/Video';
 
 function Hero() {
   return (
     <FadeIn className='relative w-full h-screen min-h-80 max-h-215 overflow-hidden'>
-      <HeroVideo />
+      <Video videoUrl={consecratedVideo}  />
 
       <div className='absolute inset-0 bg-black/40' />
 
