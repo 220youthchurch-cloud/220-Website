@@ -184,7 +184,7 @@ const Navbar = () => {
                     </NavLink>
 
                     {/* Submenu */}
-                    <div className='absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 ease-out'>
+                    <div className='absolute left-1/2 top-full -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out'>
                       <div
                         className={`${isTransparentTopMode
                           ? 'border border-white/25 bg-black/75 backdrop-blur-md'
