@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import FadeIn from "../common/FadeIn"
-import { loadYoutubeVideo } from '../../services/youtubeService';
+import { loadYoutubeVideos } from '../../services/youtubeService';
 import YouTubeVideo from '../common/YouTubeVideo';
 
 const LatestMessage = () => {
@@ -10,7 +10,7 @@ const LatestMessage = () => {
 
   useEffect(() => {
     async function fetchLatestVideo() {
-      const items = await loadYoutubeVideo(setLoading, setError, 1);
+      const items = await loadYoutubeVideos(setLoading, setError, 1);
       if (!items || !items.length) {
         return;
       }

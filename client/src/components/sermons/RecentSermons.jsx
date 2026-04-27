@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import FadeIn from '../common/FadeIn'
-import { loadYoutubeVideo } from '../../services/youtubeService'
+import { loadYoutubeVideos } from '../../services/youtubeService'
 
 const formatDate = (isoDate) => {
   if (!isoDate) return 'Unknown date'
@@ -19,7 +19,7 @@ const RecentSermons = () => {
 
   useEffect(() => {
     async function fetchRecentSermons() {
-      const items = await loadYoutubeVideo(setLoading, setError, 9)
+      const items = await loadYoutubeVideos(setLoading, setError, 9)
 
       if (!items || !items.length) {
         return
