@@ -2,7 +2,7 @@ const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 const UPLOAD_PLAYLIST_ID = import.meta.env.VITE_YOUTUBE_UPLOAD_PLAYLIST_ID;
 
 
-export async function loadYoutubeVideo(setLoading, setError, amount) {
+export async function loadYoutubeVideos(setLoading, setError, amount) {
     if (!API_KEY || !UPLOAD_PLAYLIST_ID) {
       setError('Missing Youtube env variables.')
       setLoading(false);
