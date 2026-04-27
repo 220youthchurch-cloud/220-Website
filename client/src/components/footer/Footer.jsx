@@ -2,36 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../common/Logo';
 import SocialMediaPlatforms from '../common/SocialMediaPlatforms';
+import { navLinks } from '../../data/navigation'
 
 
 const Footer = () => {
-  const quickLinks = [
-    {
-      title: 'Home',
-      path: '/',
-      subsections: ['Home Subsection Placeholder', 'Home Subsection Placeholder', 'Home Subsection Placeholder'],
-    },
-    {
-      title: 'About',
-      path: '/about',
-      subsections: ['About Subsection Placeholder', 'About Subsection Placeholder', 'About Subsection Placeholder'],
-    },
-    {
-      title: 'Our Team',
-      path: '/our-team',
-      subsections: ['Team Subsection Placeholder', 'Team Subsection Placeholder', 'Team Subsection Placeholder'],
-    },
-    {
-      title: 'Events',
-      path: '/events',
-      subsections: ['Events Subsection Placeholder', 'Events Subsection Placeholder', 'Events Subsection Placeholder'],
-    },
-    {
-      title: 'Contact',
-      path: '/contact',
-      subsections: ['Contact Subsection Placeholder', 'Contact Subsection Placeholder', 'Contact Subsection Placeholder'],
-    },
-  ]
+  const quickLinks = navLinks
 
   return (
     <footer className='bg-[#10263b] text-[#f7f7f7]'>
@@ -47,23 +22,30 @@ const Footer = () => {
         </div>
         
         {/* Quick Links */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 border-y border-[#f7f7f7]/20 py-10'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 border-y border-[#f7f7f7]/20 py-10'>
           {quickLinks.map((page) => (
-            <div key={page.title} className='min-w-0'>
+            <div key={page.to} className='min-w-0'>
               <Link
-                to={page.path}
+                to={page.to}
                 className='header-font text-sm uppercase tracking-[0.12em] text-[#f7f7f7] hover:text-[#8fb8df] transition-colors duration-200'
               >
-                {page.title}
+                {page.label}
               </Link>
 
-              <ul className='mt-4 space-y-2'>
-                {page.subsections.map((item, index) => (
-                  <li key={`${page.title}-${index}`}>
-                    <span className='body-font text-sm text-[#f7f7f7]/70'>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              {page.subsections?.length > 0 && (
+                <ul className='mt-4 space-y-2'>
+                  {page.subsections.map((subsection) => (
+                    <li key={subsection.to}>
+                      <Link
+                        to={subsection.to}
+                        className='body-font text-sm text-[#f7f7f7]/70 hover:text-[#8fb8df] transition-colors duration-200'
+                      >
+                        {subsection.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
