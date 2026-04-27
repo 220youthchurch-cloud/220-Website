@@ -6,6 +6,7 @@ import WelcomeTo220 from '../components/home/WelcomeTo220'
 import Motto from '../components/home/Motto'
 import LatestMessage from '../components/home/LatestMessage'
 import FollowUs from '../components/home/FollowUs'
+import Map from '../components/common/Map'
 const Home = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const Home = () => {
       <Motto />
       <LatestMessage />
       <FollowUs />
+      <Map />
     </>
   )
 }
