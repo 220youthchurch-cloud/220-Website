@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, ScrollRestoration } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -12,6 +12,7 @@ function App() {
       <Navbar />
       <main>
       <Outlet />
+      <ScrollRestoration />
       </main>
       <Footer />
     </div>
