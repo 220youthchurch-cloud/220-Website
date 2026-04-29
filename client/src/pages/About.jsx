@@ -1,6 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/common/PageHeader'
-import AboutSplitSections from '../components/about/AboutSplitSections'
+import AboutIntro from '../components/about/AboutIntro'
+import AboutSubsectionCards from '../components/about/AboutSubsectionCards'
 
 const About = () => {
   return (
@@ -10,7 +11,8 @@ const About = () => {
         description='We are a Christ-centered family helping people grow in faith, community, and purpose through worship, discipleship, and service.'
       />
 
-      <AboutSplitSections />
+      <AboutIntro />
+      <AboutSubsectionCards />
     </>
   )
 }
