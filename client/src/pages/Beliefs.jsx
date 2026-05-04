@@ -90,7 +90,7 @@ const Beliefs = () => {
         <div className='content-container text-center'>
           <h2 className='section-heading text-[#10263b] mb-6'>Join Us on This Journey</h2>
           <p className='section-body max-w-3xl mx-auto mb-8'>
-            Whether you\'re curious about Christianity, seeking to deepen your faith, or looking for a community that shares your values, we welcome you to 220 For Life. Come as you are, and let\'s explore these beliefs together.
+            Whether you're curious about Christianity, seeking to deepen your faith, or looking for a community that shares your values, we welcome you to 220 For Life. Come as you are, and let's explore these beliefs together.
           </p>
           <a href='/contact' className='btn-primary'>
             Get in Touch
