@@ -7,6 +7,7 @@ const LatestMessage = () => {
   const [video, setVideo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const channelUrl = 'https://www.youtube.com/@220ForLife';
 
   useEffect(() => {
     async function fetchLatestVideo() {
@@ -26,9 +27,33 @@ const LatestMessage = () => {
     fetchLatestVideo();
   }, [])
 
-  if (loading) return <section className='section-padding'><p>Loading latest video...</p></section>;
-  if (error) return <section className='section-padding'><p>{error}</p></section>;
-  if (!video) return null;
+  if (loading) {
+    return (
+      <section className='section-padding'>
+        <div className='content-container'>
+          <div className='mx-auto flex w-full max-w-4xl flex-col items-center'>
+            <h2 className='section-heading primary-text'>Latest Message</h2>
+            <p className='mt-3 body-font text-sm text-slate-600'>Loading latest video...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (error || !video) {
+    return (
+      <FadeIn className='section-padding'>
+        <div className='content-container'>
+          <div className='mx-auto flex w-full max-w-4xl flex-col items-center'>
+            <h2 className='section-heading primary-text'>Latest Message</h2>
+            <a href={channelUrl} target='_blank' rel='noreferrer' className='btn-primary mt-5'>
+              View Channel
+            </a>
+          </div>
+        </div>
+      </FadeIn>
+    );
+  }
 
   return (
     <FadeIn className='section-padding'>
@@ -38,7 +63,7 @@ const LatestMessage = () => {
 
           <YouTubeVideo video={video} />
 
-          <a href='https://www.youtube.com/@220ForLife' target='_blank' rel='noreferrer' className='btn-primary mt-5'>
+          <a href={channelUrl} target='_blank' rel='noreferrer' className='btn-primary mt-5'>
             See More
           </a>
         </div>

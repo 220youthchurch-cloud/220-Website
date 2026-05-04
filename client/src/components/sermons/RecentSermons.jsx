@@ -16,6 +16,8 @@ const RecentSermons = () => {
   const [sermons, setSermons] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+  const hasSermons = sermons.length > 0
+  const channelUrl = 'https://www.youtube.com/@220ForLife'
 
   useEffect(() => {
     async function fetchRecentSermons() {
@@ -53,23 +55,14 @@ const RecentSermons = () => {
       <div className='content-container'>
         <div className='mx-auto max-w-3xl text-center'>
           <h2 className='section-heading primary-text'>Recent sermons</h2>
-          <a
-            href='https://www.youtube.com/@220ForLife'
-            target='_blank'
-            rel='noreferrer'
-            className='btn-secondary mt-6'
-          >
+          <a href={channelUrl} target='_blank' rel='noreferrer' className='btn-secondary mt-6'>
             Sermon archive
           </a>
         </div>
 
         {loading && <p className='section-body text-center'>Loading sermons...</p>}
 
-        {error && !loading && (
-          <p className='section-body text-center text-red-600'>{error}</p>
-        )}
-
-        {!loading && !error && (
+        {!loading && !error && hasSermons && (
           <div className='mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             {sermons.map((sermon) => (
               <a
