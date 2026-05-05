@@ -15,6 +15,7 @@ import HospitalityTeam from './pages/HospitalityTeam'
 import OutreachTeam from './pages/OutreachTeam'
 import DiscipleshipTeam from './pages/DiscipleshipTeam'
 import PrayerTeam from './pages/PrayerTeam'
+import Contact from './pages/Contact';
 
 export const router = createBrowserRouter([
   {
@@ -80,7 +81,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'contact',
-        element: <p>Contact page here</p>
+        element: <Contact />
       },
     ],
   },
