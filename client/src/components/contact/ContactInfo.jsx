@@ -93,7 +93,7 @@ const ContactInfo = () => {
       <div>
         <h3 className='mb-4 font-semibold text-[#10263b]'>Follow Us</h3>
         <div className='flex flex-wrap gap-4'>
-          <SocialMediaPlatforms className='gap-2' buttonClassName='bg-[#2c6598] hover:bg-blue-600!' displayTitle={false} />
+          <SocialMediaPlatforms className='gap-2' buttonClassName='bg-[#2c6598] hover:text-black' displayTitle={false} />
         </div>
       </div>
     </div>
