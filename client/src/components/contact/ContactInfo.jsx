@@ -22,7 +22,7 @@ const contactDetails = [
   {
     title: 'Email',
     icon: FaEnvelope,
-    lines: ['Berhanwongeldallas@gmail.com'],
+    lines: ['someemail@gmail.com'],
     href: 'mailto:Berhanwongeldallas@gmail.com',
   },
   {
