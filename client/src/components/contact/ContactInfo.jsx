@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaYoutube } from 'react-icons/fa'
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa'
 
 import SocialMediaPlatforms from '../../components/common/SocialMediaPlatforms'
 
