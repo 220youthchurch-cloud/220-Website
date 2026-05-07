@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import FadeIn from "../common/FadeIn"
 import { loadYoutubeVideos } from '../../services/youtubeService';
-import YouTubeVideo from '../common/YouTubeVideo';
+import YouTubeVideo from '../common/YoutubeVideo';
 
 const LatestMessage = () => {
   const [video, setVideo] = useState(null);
