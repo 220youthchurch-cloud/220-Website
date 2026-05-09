@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom'
 // TODO: Update these links when we create the pages
 const highlightItems = [
   {
-    title: 'Groups',
+    title: 'Beliefs',
     imageUrl: '/misc/img1.jpg',
-    to: '/',
+    to: '/about/beliefs',
   },
   {
-    title: 'Serve',
+    title: 'Our Story',
     imageUrl: '/misc/img13.jpg',
-    to: '/',
+    to: '/about/our-story',
   },
   {
     title: 'Worship',
@@ -20,9 +20,9 @@ const highlightItems = [
     to: '/our-team/worship-team',
   },
   {
-    title: 'Home Groups',
+    title: 'Mission & Vision',
     imageUrl: '/misc/img4.jpg',
-    to: '/',
+    to: '/about/mission-vision',
   },
 ]
 
