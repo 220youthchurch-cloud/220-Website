@@ -6,10 +6,10 @@ const AboutSubsectionCards = () => {
   const subsections = [
     {
       id: 1,
-      title: 'Our Story',
+      title: 'What Is 220?',
       subtitle: 'From Humble Beginnings to Today',
       description: 'Discover the journey of 220 For Life—how God has guided us from our founding to becoming a thriving, multi-generational community of faith.',
-      link: '/about/our-story',
+      link: '/about/what-is-220',
       icon: '📖',
       image: '/misc/img5.jpg',
       color: 'from-[#2c6598] to-[#1f5079]',

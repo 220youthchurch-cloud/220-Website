@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Events from './pages/Events'
 import Sermons from './pages/Sermons'
-import OurStory from './components/home/OurStory'
+import WhatIs220 from './components/home/WhatIs220'
 import MissionVision from './components/home/MissionVision'
 import Beliefs from './pages/Beliefs'
 import OurTeam from './pages/OurTeam'
@@ -31,8 +31,8 @@ export const router = createBrowserRouter([
         element: <About />
       },
       {
-        path: 'about/our-story',
-        element: <OurStory />
+        path: 'about/what-is-220',
+        element: <WhatIs220 />
       },
       {
         path: 'about/mission-vision',

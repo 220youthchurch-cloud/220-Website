@@ -10,7 +10,7 @@ const WelcomeTo220 = () => {
           <div className='md:w-1/2'>
             <h1 className='section-heading primary-text'>Welcome To 220!</h1>
             <p className='section-body'>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. <span className='header-font font-bold'>Nulla consequat massa quis enim</span>. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+            Welcome to 220 - the Youth & Young Adults Ministry of Gospel Light Eritrean Church. Our name comes from <span className='header-font font-bold'>Galatians 2:20</span>, a single verse that holds everything this ministry exists to proclaim: identity, death to self, the indwelling Christ, a life lived by faith, and a Savior who loved us and gave Himself for us. We didn't choose this name because it sounded clever. We chose it because it tells the truth — about who we are, and about who we believe every young person who walks through our doors is meant to become. We're glad you're here.
             </p>
             <a href='/about'>
               <button className='btn-primary mt-8'>About Us</button>

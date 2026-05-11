@@ -10,9 +10,9 @@ const highlightItems = [
     to: '/about/beliefs',
   },
   {
-    title: 'Our Story',
+    title: 'What is 220?',
     imageUrl: '/misc/img13.jpg',
-    to: '/about/our-story',
+    to: '/about/what-is-220',
   },
   {
     title: 'Worship',

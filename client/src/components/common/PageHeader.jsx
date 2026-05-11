@@ -8,7 +8,7 @@ const PageHeader = ({ title, description, className = '' }) => {
       <div className='content-container relative z-10'>
         <p className='header-font primary-text text-sm uppercase tracking-[0.2em]'>220 For Life</p>
         <h1 className='section-heading mt-3 text-[#10263b]'>{title}</h1>
-        <p className='section-body max-w-3xl'>{description}</p>
+        <div className='section-body max-w-3xl'>{description}</div>
       </div>
     </header>
   )

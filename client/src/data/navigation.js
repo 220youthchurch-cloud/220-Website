@@ -1,7 +1,7 @@
 export const aboutSubsections = [
   {
-    to: '/about/our-story',
-    label: 'Our Story',
+    to: '/about/what-is-220',
+    label: 'What is 220?',
   },
   {
     to: '/about/mission-vision',
