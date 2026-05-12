@@ -1,6 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/common/PageHeader'
 import FadeIn from '../components/common/FadeIn'
+import Quote from '../components/common/Quote'
 
 const Beliefs = () => {
   const beliefs = [
@@ -60,21 +61,18 @@ const Beliefs = () => {
     <>
       <PageHeader
         title='Statement of Faith'
-        description='Every leader in 220 stands on the same foundation. The doctrines articulated below are not optional convictions or personal preferences — they are the essential truths of the historic Christian faith that Gospel Light Eritrean Church believes, teaches, and confesses.'
+        description={
+          <Quote
+            quote="Contend for the faith that was once for all delivered to the saints."
+            reference="Jude 1:3"
+          />
+        }
       />
 
       {/* Statement */}
       <FadeIn className='bg-white section-padding'>
         <div className='content-container'>
           <h2 className='section-heading text-[#10263b] mb-6'>Statement of Faith</h2>
-
-          <figure className='border-l-4 border-[#2c6598] pl-6'>
-            <blockquote className='section-body text-slate-700'>
-              “Contend for the faith that was once for all delivered to the saints.”
-            </blockquote>
-            <figcaption className='section-body mt-2 text-slate-700'>— Jude 3</figcaption>
-          </figure>
-
           <p className='section-body mt-8'>
             Every leader in 220 stands on the same foundation. The doctrines articulated below are not optional
             convictions or personal preferences — they are the essential truths of the historic Christian faith that

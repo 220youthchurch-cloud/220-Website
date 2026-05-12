@@ -27,7 +27,7 @@ const Events = () => {
     <>
       <PageHeader
         title='Events'
-        description='Plans and executes 220 events — retreats, conferences, outreach nights, social gatherings, and special services. Logistics, coordination, and creative environment design.'
+        description='Check out our upcoming events and join us for worship, fellowship, and service opportunities.'
       />
 
       <FadeIn className='section-padding bg-[#f8fbfe]'>

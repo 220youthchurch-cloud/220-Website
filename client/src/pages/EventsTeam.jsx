@@ -8,8 +8,8 @@ const EventsTeam = () => {
   return (
     <>
       <PageHeader
-        title='Events Team'
-        description='Get to know our Events Team and how they create meaningful experiences for our church family and community!'
+        title='Events'
+        description='Plans and executes 220 events — retreats, conferences, outreach nights, social gatherings, and special services. Logistics, coordination, and creative environment design.'
       />
     </>
   )

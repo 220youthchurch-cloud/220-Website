@@ -24,7 +24,7 @@ export const ourTeamSubsections = [
   },
   {
     to: '/serve/av-team',
-    label: 'A/V (Audio/Visual) Team',
+    label: 'A/V Team',
   },
   {
     to: '/serve/media-team',
