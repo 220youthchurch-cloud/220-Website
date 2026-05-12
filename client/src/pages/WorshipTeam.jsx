@@ -9,7 +9,7 @@ const WorshipTeam = () => {
     <>
       <PageHeader
         title='Worship Team'
-        description='Meet the team that leads the church into heartfelt praise and worship each week.'
+        description='Leads the congregation into the presence of God through music. Includes vocalists, instrumentalists, and worship leaders who serve at gatherings, services, and events.'
       />
     </>
   )

@@ -17,7 +17,7 @@ const highlightItems = [
   {
     title: 'Worship',
     imageUrl: '/misc/img3.jpg',
-    to: '/our-team/worship-team',
+    to: '/serve/worship-team',
   },
   {
     title: 'Mission & Vision',

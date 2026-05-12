@@ -9,7 +9,7 @@ const MediaTeam = () => {
     <>
       <PageHeader
         title='Media Team'
-        description='See what our Media Team is all about and how you can get involved!'
+        description='Captures and creates content — photo, video, design, and storytelling. Runs the ministry’s social presence and produces media that points people to Christ.'
       />
     </>
   )

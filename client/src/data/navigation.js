@@ -15,25 +15,41 @@ export const aboutSubsections = [
 
 export const ourTeamSubsections = [
   {
-    to: '/our-team/worship-team',
+    to: '/serve/home-group-leader',
+    label: 'Home Group Leader',
+  },
+  {
+    to: '/serve/worship-team',
     label: 'Worship Team',
   },
   {
-    to: '/our-team/hospitality-team',
-    label: 'Hospitality Team',
+    to: '/serve/av-team',
+    label: 'A/V (Audio/Visual) Team',
   },
   {
-    to: '/our-team/media-team',
+    to: '/serve/media-team',
     label: 'Media Team',
   },
   {
-    to: '/our-team/events-team',
+    to: '/serve/hospitality-team',
+    label: 'Hospitality Team',
+  },
+  {
+    to: '/serve/prayer-team',
+    label: 'Prayer Team',
+  },
+  {
+    to: '/serve/events-team',
     label: 'Events Team',
   },
   {
-    to: '/our-team/prayer-team',
-    label: 'Prayer Team',
+    to: '/serve/evangelism-team',
+    label: 'Evangelism Team',
   },
+  {
+    to: '/serve/discipleship-team',
+    label: 'Discipleship Team',
+  }
 ]
 
 export const navLinks = [
@@ -47,8 +63,8 @@ export const navLinks = [
     subsections: aboutSubsections,
   },
   {
-    to: '/our-team',
-    label: 'Our Team',
+    to: '/serve',
+    label: 'Serve',
     subsections: ourTeamSubsections,
   },
   {

@@ -9,7 +9,7 @@ const HospitalityTeam = () => {
     <>
       <PageHeader
         title='Hospitality Team'
-        description='Discover the ministry that welcomes people and helps everyone feel at home.'
+        description='First impressions and last impressions. Greets at the door, sets up spaces, prepares food and drinks, and ensures that every person who walks in feels welcomed and known.'
       />
     </>
   )

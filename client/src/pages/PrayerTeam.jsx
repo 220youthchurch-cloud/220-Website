@@ -9,7 +9,7 @@ const PrayerTeam = () => {
     <>
       <PageHeader
         title='Prayer Team'
-        description='Learn about the team devoted to intercession, prayer support, and spiritual care.'
+        description='The engine room. Intercedes for the ministry, the leaders, and the people. Prays before, during, and after gatherings. Maintains a prayer rhythm that fuels everything else.'
       />
     </>
   )

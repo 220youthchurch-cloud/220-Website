@@ -8,12 +8,16 @@ import Sermons from './pages/Sermons'
 import WhatIs220 from './components/home/WhatIs220'
 import MissionVision from './components/home/MissionVision'
 import Beliefs from './pages/Beliefs'
-import OurTeam from './pages/OurTeam'
+import Serve from './pages/serve'
+import HomeGroupTeam from './pages/HomeGroupTeam'
 import WorshipTeam from './pages/WorshipTeam'
-import HospitalityTeam from './pages/HospitalityTeam'
+import AVTeam from './pages/AVTeam'
 import MediaTeam from './pages/MediaTeam'
-import EventsTeam from './pages/EventsTeam'
+import HospitalityTeam from './pages/HospitalityTeam'
 import PrayerTeam from './pages/PrayerTeam'
+import EventsTeam from './pages/EventsTeam'
+import EvangelismTeam from './pages/EvangelismTeam'
+import DiscipleshipTeam from './pages/DiscipleshipTeam'
 import Contact from './pages/Contact';
 
 export const router = createBrowserRouter([
@@ -43,28 +47,44 @@ export const router = createBrowserRouter([
         element: <Beliefs />
       },
       {
-        path: 'our-team',
-        element: <OurTeam />
+        path: 'serve',
+        element: <Serve />
       },
       {
-        path: 'our-team/worship-team',
+        path: 'serve/home-group-leader',
+        element: <HomeGroupTeam />
+      },
+      {
+        path: 'serve/worship-team',
         element: <WorshipTeam />
       },
       {
-        path: 'our-team/hospitality-team',
-        element: <HospitalityTeam />
+        path: 'serve/av-team',
+        element: <AVTeam />
       },
       {
-        path: 'our-team/media-team',
+        path: 'serve/media-team',
         element: <MediaTeam />
       },
       {
-        path: 'our-team/events-team',
+        path: 'serve/hospitality-team',
+        element: <HospitalityTeam />
+      },
+      {
+        path: 'serve/prayer-team',
+        element: <PrayerTeam />
+      },
+      {
+        path: 'serve/events-team',
         element: <EventsTeam />
       },
       {
-        path: 'our-team/prayer-team',
-        element: <PrayerTeam />
+        path: 'serve/evangelism-team',
+        element: <EvangelismTeam />
+      },
+      {
+        path: 'serve/discipleship-team',
+        element: <DiscipleshipTeam />
       },
       {
         path: 'events',
