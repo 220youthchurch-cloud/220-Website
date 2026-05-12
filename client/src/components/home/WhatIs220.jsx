@@ -43,12 +43,12 @@ const WhatIs220 = () => {
       <PageHeader
         title='What is 220?'
         description={
-          <div className="flex flex-col gap-2">
-            <p className="italic">
-              “I have been crucified with Christ. It is no longer I who live, but Christ who lives in me. And the life I now live in the flesh I live by faith in the Son of God, who loved me and gave himself for me.”
-            </p>
-            <p className="font-bold">— Galatians 2:20</p>
-          </div>
+          <figure className="flex flex-col gap-4 border-l-4 border-[#2c6598] pl-6">
+            <blockquote className="italic text-lg leading-relaxed">
+              "I have been crucified with Christ. It is no longer I who live, but Christ who lives in me. And the life I now live in the flesh I live by faith in the Son of God, who loved me and gave himself for me."
+            </blockquote>
+            <figcaption className="font-bold text-sm text-gray-700">— Galatians 2:20</figcaption>
+          </figure>
         }
       />
 

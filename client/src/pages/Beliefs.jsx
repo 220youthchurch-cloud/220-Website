@@ -5,47 +5,92 @@ import FadeIn from '../components/common/FadeIn'
 const Beliefs = () => {
   const beliefs = [
     {
-      title: 'The Authority of Scripture',
-      description:
-        'We believe the Bible is the authoritative, inspired Word of God. It is our guide for faith, practice, and daily living. We are committed to teaching, studying, and living out the truths found in Scripture.',
-    },
-    {
-      title: 'Salvation Through Christ',
-      description:
-        'We believe that Jesus Christ died for our sins, rose from the dead, and offers salvation to all who believe in Him. Salvation is a gift of God\'s grace, not earned by our works, and is available to everyone.',
-    },
-    {
       title: 'The Trinity',
       description:
-        'We believe in one God eternally existing in three persons: Father, Son, and Holy Spirit. Each person of the Godhead is fully divine and actively involved in redemption and sustaining creation.',
+        'We believe in one God, eternally existing in three persons — Father, Son, and Holy Spirit — equal in deity, power, and glory.',
     },
     {
-      title: 'The Power of the Holy Spirit',
+      title: 'The Bible',
       description:
-        'We believe the Holy Spirit is God\'s presence within believers, empowering us for transformed living, spiritual growth, and effective ministry. The Spirit\'s fruit in our lives is evidence of a genuine faith.',
+        'We believe the 66 books of the Old and New Testaments are the inspired, inerrant, and authoritative Word of God, the final authority for all matters of faith, life, and doctrine.',
     },
     {
-      title: 'Transformation Through Discipleship',
+      title: 'Jesus Christ',
       description:
-        'We believe that true faith is evidenced by a transformed life. We are committed to helping people grow in their relationship with Christ through prayer, Bible study, worship, and community engagement.',
+        'We believe Jesus Christ is the eternal Son of God — fully God and fully man. Conceived by the Holy Spirit, born of the virgin Mary, He lived a sinless life, died on the cross as a substitutionary sacrifice for our sins, was bodily resurrected, ascended into heaven, and will return in power and glory.',
     },
     {
-      title: 'Service and Love for Others',
+      title: 'Humanity & Sin',
       description:
-        'We believe we are called to demonstrate Christ\'s love through serving others, caring for the vulnerable, and working for justice. Our faith must result in actions that reflect God\'s compassion.',
+        'We believe all human beings are created in the image of God, yet through the fall have inherited a sinful nature — leaving every person spiritually separated from God and in need of redemption through Jesus Christ.',
+    },
+    {
+      title: 'Man as Male and Female',
+      description:
+        'We believe that men and women are both made in the image of God, equal in dignity and worth before Him. Gender, designated by God through biological sex, is essential to our identity as male and female — neither incidental nor fluid. Men and women reflect and represent God in distinct and complementary ways, and these differences are to be honored and celebrated in all dimensions of life. Though the fall distorts and damages God’s design for gender, its goodness remains part of the beauty of His created order, by which we glorify Him as male and female.',
+    },
+    {
+      title: 'Salvation',
+      description:
+        'We believe salvation is the free gift of God’s grace, received through repentance from sin and faith in the finished work of Jesus Christ alone — not by human works, merit, or religious observance.',
+    },
+    {
+      title: 'The Holy Spirit',
+      description:
+        'We believe the Holy Spirit indwells every believer, sealing them in Christ, illuminating Scripture, empowering godly living, gifting the Church for ministry, and producing the fruit of Christlike character.',
+    },
+    {
+      title: 'The Universal Church',
+      description:
+        'We believe the universal Church is the true, worshipping community of God’s people — composed of all the redeemed across all time, called out of every nation by His Word and Spirit, and purchased by the blood of Christ to form a new redeemed humanity.',
+    },
+    {
+      title: 'The Local Church',
+      description:
+        'We believe the local church is the visible expression of Christ’s universal Church and the focal point of God’s plan to mature His people and save sinners. Every Christian is called to commit themselves as a member to a specific local church. A true church is marked by the faithful preaching of the Word, the right administration of the ordinances, and the proper exercise of church discipline. Though imperfect — often containing a mixture of unbelievers among the true flock and vulnerable to theological error and moral failure — Christ is unwavering in His commitment to build His church and will surely bring it to maturity.',
+    },
+    {
+      title: 'Resurrection & Return',
+      description:
+        'We believe in the bodily resurrection of both the saved and the lost — the saved to eternal life with God in glory, and the lost to eternal separation from God in conscious judgment.',
     },
   ]
 
   return (
     <>
       <PageHeader
-        title='What We Believe'
-        description='We are committed to biblical truth and the historic Christian faith. These core beliefs guide our worship, teaching, and service to our community.'
+        title='Statement of Faith'
+        description='Every leader in 220 stands on the same foundation. The doctrines articulated below are not optional convictions or personal preferences — they are the essential truths of the historic Christian faith that Gospel Light Eritrean Church believes, teaches, and confesses.'
       />
 
-      {/* Core Beliefs Grid */}
+      {/* Statement */}
       <FadeIn className='bg-white section-padding'>
         <div className='content-container'>
+          <h2 className='section-heading text-[#10263b] mb-6'>Statement of Faith</h2>
+
+          <figure className='border-l-4 border-[#2c6598] pl-6'>
+            <blockquote className='section-body text-slate-700'>
+              “Contend for the faith that was once for all delivered to the saints.”
+            </blockquote>
+            <figcaption className='section-body mt-2 text-slate-700'>— Jude 3</figcaption>
+          </figure>
+
+          <p className='section-body mt-8'>
+            Every leader in 220 stands on the same foundation. The doctrines articulated below are not optional
+            convictions or personal preferences — they are the essential truths of the historic Christian faith that
+            Gospel Light Eritrean Church believes, teaches, and confesses. As a volunteer leader, you are not asked
+            to be an expert theologian, but you are asked to affirm, embody, and never undermine these truths in
+            your teaching, your conversations, or your conduct. What we believe shapes what we do. What we do
+            reveals what we believe.
+          </p>
+        </div>
+      </FadeIn>
+
+      {/* Essential Beliefs */}
+      <FadeIn className='bg-[#eef4fa] section-padding'>
+        <div className='content-container'>
+          <h2 className='section-heading text-[#10263b] mb-10'>Essential Beliefs</h2>
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
             {beliefs.map((belief, index) => (
               <div key={index} className='border-l-4 border-[#2c6598] pl-6'>
@@ -61,40 +106,17 @@ const Beliefs = () => {
         </div>
       </FadeIn>
 
-      {/* Doctrinal Foundation */}
-      <FadeIn className='bg-[#eef4fa] section-padding'>
-        <article className='grid w-full md:grid-cols-2 items-center gap-12'>
-          <div>
-            <img
-              src='/misc/img12.jpg'
-              alt='Our Faith Community'
-              className='w-full object-cover rounded-lg'
-              loading='lazy'
-            />
-          </div>
-
-          <div>
-            <h2 className='section-heading text-[#10263b] mb-6'>Our Doctrinal Foundation</h2>
-            <p className='section-body mb-6'>
-              While these core beliefs define our faith, we recognize that Christians across denominations and traditions may express their faith differently. We are committed to being welcoming and inclusive while remaining firm in our convictions about the essentials of the Christian faith.
-            </p>
-            <p className='section-body'>
-              Our beliefs are grounded in the historic creeds of Christianity and affirmed through ongoing prayer, study, and spiritual discernment. We invite you to explore these truths with us and discover how they can transform your life and deepen your relationship with God.
-            </p>
-          </div>
-        </article>
-      </FadeIn>
-
-      {/* Call to Discipleship */}
+      {/* Our Posture as Leaders */}
       <FadeIn className='bg-white section-padding'>
-        <div className='content-container text-center'>
-          <h2 className='section-heading text-[#10263b] mb-6'>Join Us on This Journey</h2>
-          <p className='section-body max-w-3xl mx-auto mb-8'>
-            Whether you're curious about Christianity, seeking to deepen your faith, or looking for a community that shares your values, we welcome you to 220 For Life. Come as you are, and let's explore these beliefs together.
+        <div className='content-container'>
+          <h2 className='section-heading text-[#10263b] mb-6'>Our Posture as Leaders</h2>
+          <p className='section-body'>
+            As a 220 leader, you are not required to teach systematic theology, but you are required to live, speak,
+            and serve in alignment with the convictions above. If at any point your beliefs come to differ from what
+            is confessed here — whether due to study, honest doubt, or pastoral concern — we ask that you bring that
+            conversation to pastoral leadership in good faith rather than teach against the church or quietly drift.
+            The unity of the body and the integrity of our witness depend on it.
           </p>
-          <a href='/contact' className='btn-primary'>
-            Get in Touch
-          </a>
         </div>
       </FadeIn>
     </>
