@@ -2,17 +2,16 @@ import React from 'react'
 import FadeIn from "../common/FadeIn"
 import { Link } from 'react-router-dom'
 
-// TODO: Update these links when we create the pages
 const highlightItems = [
   {
-    title: 'Beliefs',
+    title: 'What is 220?',
     imageUrl: '/misc/img1.jpg',
-    to: '/about/beliefs',
+    to: '/about/what-is-220',
   },
   {
-    title: 'What is 220?',
-    imageUrl: '/misc/img13.jpg',
-    to: '/about/what-is-220',
+    title: 'What we believe',
+    imageUrl: '/misc/img11.jpg',
+    to: '/about/beliefs',
   },
   {
     title: 'Worship',
