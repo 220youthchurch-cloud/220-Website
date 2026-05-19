@@ -12,18 +12,18 @@ const contactDetails = [
     href: 'https://maps.app.goo.gl/17oLXgmbpW4BTJgB9',
     actionText: 'Get Directions ->',
     external: true,
-  },
+  },/*
   {
     title: 'Phone',
     icon: FaPhoneAlt,
     lines: ['(000) 000-000'],
     href: 'tel:+17029798235',
-  },
+  },*/
   {
     title: 'Email',
     icon: FaEnvelope,
-    lines: ['someemail@gmail.com'],
-    href: 'mailto:Berhanwongeldallas@gmail.com',
+    lines: ['220youthchurch@gmail.com'],
+    href: 'mailto:220youthchurch@gmail.com',
   },
   {
     title: 'Service Times',
