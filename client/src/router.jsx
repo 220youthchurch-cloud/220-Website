@@ -9,15 +9,6 @@ import WhatIs220 from './components/home/WhatIs220'
 import MissionVision from './components/home/MissionVision'
 import Beliefs from './pages/Beliefs'
 import Serve from './pages/Serve'
-import HomeGroupTeam from './pages/HomeGroupTeam'
-import WorshipTeam from './pages/WorshipTeam'
-import AVTeam from './pages/AVTeam'
-import MediaTeam from './pages/MediaTeam'
-import HospitalityTeam from './pages/HospitalityTeam'
-import PrayerTeam from './pages/PrayerTeam'
-import EventsTeam from './pages/EventsTeam'
-import EvangelismTeam from './pages/EvangelismTeam'
-import DiscipleshipTeam from './pages/DiscipleshipTeam'
 import Contact from './pages/Contact';
 
 import ErrorPage from './pages/ErrorPage'
@@ -51,42 +42,6 @@ export const router = createBrowserRouter([
       {
         path: 'serve',
         element: <Serve />
-      },
-      {
-        path: 'serve/home-group-leader',
-        element: <HomeGroupTeam />
-      },
-      {
-        path: 'serve/worship-team',
-        element: <WorshipTeam />
-      },
-      {
-        path: 'serve/av-team',
-        element: <AVTeam />
-      },
-      {
-        path: 'serve/media-team',
-        element: <MediaTeam />
-      },
-      {
-        path: 'serve/hospitality-team',
-        element: <HospitalityTeam />
-      },
-      {
-        path: 'serve/prayer-team',
-        element: <PrayerTeam />
-      },
-      {
-        path: 'serve/events-team',
-        element: <EventsTeam />
-      },
-      {
-        path: 'serve/evangelism-team',
-        element: <EvangelismTeam />
-      },
-      {
-        path: 'serve/discipleship-team',
-        element: <DiscipleshipTeam />
       },
       {
         path: 'events',
