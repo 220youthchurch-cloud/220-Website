@@ -79,7 +79,7 @@ const Serve = () => {
         </div>
       </FadeIn>
       {/* Roles */}
-      <FadeIn className='bg-white section-padding'>
+      <FadeIn className='bg-white py-1'>
         <div className='content-container'>
           <h2 className='section-heading text-[#10263b] mb-6'>The Volunteer Roles in 220</h2>
           <p className='section-body mt-8'>
@@ -88,7 +88,7 @@ const Serve = () => {
         </div>
         <div className='content-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12'>
           {roles.map((role) => (
-            <div key={role.title} className='bg-[#f3f7fb] rounded-xl overflow-hidden shadow-lg flex flex-col'>
+            <div key={role.title} className='bg-white rounded-xl overflow-hidden shadow-lg flex flex-col'>
               <div className='relative h-48 overflow-hidden bg-gray-200'>
                 <img
                   src={role.image}
