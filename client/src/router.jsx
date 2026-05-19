@@ -20,11 +20,13 @@ import EvangelismTeam from './pages/EvangelismTeam'
 import DiscipleshipTeam from './pages/DiscipleshipTeam'
 import Contact from './pages/Contact';
 
+import ErrorPage from './pages/ErrorPage'
+
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    // errorElement: <NotFound /> TODO: do this later
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
