@@ -79,7 +79,7 @@ const Serve = () => {
         </div>
       </FadeIn>
       {/* Roles */}
-      <FadeIn className='bg-white py-1'>
+      <FadeIn className='bg-white pt-1 section-padding'>
         <div className='content-container'>
           <h2 className='section-heading text-[#10263b] mb-6'>The Volunteer Roles in 220</h2>
           <p className='section-body mt-8'>
