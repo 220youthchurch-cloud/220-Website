@@ -14,9 +14,9 @@ const highlightItems = [
     to: '/about/beliefs',
   },
   {
-    title: 'Worship',
+    title: 'Serve with us',
     imageUrl: '/misc/img3.jpg',
-    to: '/serve/worship-team',
+    to: '/serve',
   },
   {
     title: 'Mission & Vision',
