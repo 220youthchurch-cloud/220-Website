@@ -1,14 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import PageHeader from '../components/common/PageHeader'
 import Quote from '../components/common/Quote'
 import FadeIn from '../components/common/FadeIn'
 
-import { roles, getActiveRoles } from '../data/roles'
+import { getActiveRoles } from '../data/roles'
 import RoleCard from '../components/serve/RoleCard'
+import RoleImages from '../components/serve/RoleImages'
 
 const Serve = () => {
-  const activeRoles = getActiveRoles();
+  const activeRoles = getActiveRoles()
+  const [selectedRole, setSelectedRole] = useState(null)
+
+  const openRole = (role) => {
+    setSelectedRole(role)
+  }
+
+  const closeRole = () => setSelectedRole(null)
+
+  useEffect(() => {
+    if (!selectedRole) return
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') closeRole()
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [selectedRole])
+
   return (
     <>
       <PageHeader
@@ -39,9 +64,10 @@ const Serve = () => {
         </div>
         <div className='content-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12'>
           {activeRoles.map((role) => (
-            <RoleCard role={role} />
+            <RoleCard key={role.id} onClick={() => openRole(role)} role={role} />
           ))}
         </div>
+        {selectedRole && <RoleImages role={selectedRole} onClose={closeRole} />}
       </FadeIn>
       
     </>

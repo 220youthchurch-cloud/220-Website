@@ -1,20 +1,19 @@
 import React from 'react'
 
-const RoleCard = ({ role }) => {
+const RoleCard = ({ onClick, role }) => {
   return (
     <article
-    key={role.id}
-    className='rounded-2xl border border-[#dbe6ef] bg-white shadow-sm'
+      className='rounded-2xl border border-[#dbe6ef] bg-white shadow-sm'
     >
       <button
-      type='button'
-      className='cursor-pointer w-full rounded-2xl text-left h-full'
-      //onClick={}
+        type='button'
+        className='cursor-pointer h-full w-full rounded-2xl text-left'
+        onClick={onClick}
       >
-        <div key={role.title} className='bg-white rounded-xl overflow-hidden shadow-lg flex flex-col h-full transition-colors duration-200 hover:bg-[#f7fbff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c6598]/40'>
+        <div className='bg-white rounded-xl overflow-hidden shadow-lg flex h-full flex-col transition-colors duration-200 hover:bg-[#f7fbff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c6598]/40'>
           <div className='relative h-48 overflow-hidden bg-gray-200'>
             <img
-              src={role.imagesPath + "/header.jpg"}
+              src={`${role.imagesPath}/header.jpg`}
               alt={role.title}
               className='w-full h-full object-cover'
               loading='lazy'
