@@ -140,6 +140,20 @@ export const events = [
     recurring: false,
     isVideo: false,
     mediaPath: "/events/summer_camp_2026/flyer.jpg"
+  },
+  {
+    id: 11,
+    title: "Volleyball Tournament 2026",
+    description: "Get ready for a night of volleyball, fellowship, food, and lots of fun!",
+    detailedDescription: "<h1>Volleyball Night</h1><p>Get ready for a night of <strong>volleyball, fellowship, food, and lots of fun!</strong> Whether you're playing to win or just coming to cheer everyone on, we'd love to see you there.</p><br/><p>⚠️ <strong>Registration is required</strong> (no registration = no volleyball), so be sure to sign up if you're certain you can make it.</p><br/><p><a href=\"https://docs.google.com/forms/d/e/1FAIpQLSfQKspZSn3tDYaetQX-peJvRAgpjAvYmGMZh4IlSb_G6l0YLQ/viewform?usp=header\" target=\"_blank\" rel=\"noopener noreferrer\">Register Here</a></p><br/><p>🏆 <strong>Prize for the winning team!</strong></p><br/><p>We can't wait to see you guys!!! 🏐🤍</p>",
+    date: "July 10, 2026",
+    startTime: "Jul 10 5:30 PM",
+    endTime: "Jul 10 10:00 PM",
+    location: "11110 Garland Rd, Dallas, TX 75218",
+    category: "Recreation",
+    recurring: false,
+    isVideo: false,
+    mediaPath: "/events/volleyball_tournament_2026/flyer.jpg"
   }
 ]
 
