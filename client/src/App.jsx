@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import { Outlet, ScrollRestoration } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -8,14 +11,19 @@ import Footer from './components/footer/Footer'
 
 function App() {
   return (
-    <div className='bg-white min-h-screen selection:bg-[#97afbe]'>
-      <Navbar />
-      <main>
-      <Outlet />
-      <ScrollRestoration />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <div className='bg-white min-h-screen selection:bg-[#97afbe]'>
+        <Navbar />
+        <main>
+        <Outlet />
+        <ScrollRestoration />
+        </main>
+        <Footer />
+      </div>
+      <Analytics />
+      <SpeedInsights />
+    </>
+
   )
 }
 
