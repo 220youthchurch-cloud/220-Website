@@ -1,4 +1,5 @@
 import React from 'react'
+import EventPopup from '../components/home/EventPopup'
 import Hero from './../components/home/Hero'
 import Servicetime from '../components/home/Servicetime'
 import MinistryHighlights from '../components/home/MinistryHighlights'
@@ -7,10 +8,12 @@ import Motto from '../components/home/Motto'
 import LatestMessage from '../components/home/LatestMessage'
 import FollowUs from '../components/home/FollowUs'
 import Map from '../components/common/Map'
+
 const Home = () => {
   return (
     <>
       <Hero />
+      <EventPopup />
       <Servicetime />
       <MinistryHighlights />
       <WelcomeTo220 />
