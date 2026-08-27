@@ -154,6 +154,20 @@ export const events = [
     recurring: false,
     isVideo: false,
     mediaPath: "/events/volleyball_tournament_2026/flyer.jpg"
+  },
+  {
+    id: 12,
+    title: "No Other Gods Conference 2026",
+    description: "One God. One King. One true worship. Join us November 20–22 as we gather to seek Him above all else. 1 John 5:21",
+    detailedDescription: "<h1>No Other Gods Conference 2026</h1><p>One God. One King. One true worship. Join us November 20–22 as we gather to seek Him above all else. 1 John 5:21</p><p>We are so excited to announce our annual conference, No Other Gods! This year, we will be gathering together to worship and seek the Lord with one heart and one mind. We can't wait to see you there!</p>",
+    date: "November 20-22, 2026",
+    startTime: "Nov 20 9:00 AM",
+    endTime: "Nov 22 10:00 AM",
+    location: "11110 Garland Rd, Dallas, TX 75218",
+    category: "Conference",
+    recurring: false,
+    isVideo: false,
+    mediaPath: "/events/no_other_gods_2026/flyer.jpg"
   }
 ]
 
@@ -284,6 +298,28 @@ export const getUpcomingEvents = (fromDate = new Date()) => {
 
       return nextA.getTime() - nextB.getTime()
     })
+}
+
+// gets next conference event
+export const getNextMajorEvent = (fromDate = new Date()) => {
+  return events
+    .filter((event) => {
+      if (event.category === 'Conference') {
+        const nextOccurrence = getNextOccurrence(event, fromDate)
+        return nextOccurrence && nextOccurrence >= fromDate
+      }
+      return false
+    })
+    .sort((eventA, eventB) => {
+      const nextA = getNextOccurrence(eventA, fromDate)
+      const nextB = getNextOccurrence(eventB, fromDate)
+
+      if (!nextA && !nextB) return 0
+      if (!nextA) return 1
+      if (!nextB) return -1
+
+      return nextA.getTime() - nextB.getTime()
+    })[0]
 }
 
 export const getEventsForDate = (date, eventList = []) => {
