@@ -1,9 +1,9 @@
 import React from 'react'
 import { FaTimes } from 'react-icons/fa'
 
-const Close = ({ onClose, ariaLabel }) => {
+const Close = ({ onClose, ariaLabel, className }) => {
   return (
-    <div className='mb-6 flex justify-end'>
+    <div className={`${className} flex justify-end`}>
       <button
         type='button'
         onClick={onClose}
