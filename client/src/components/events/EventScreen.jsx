@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { FaTimes } from 'react-icons/fa'
 
+import Close from '../common/Close'
+
 const formatDateLabel = (event) => {
   if (!event) return ''
   return event.recurring ? `Every ${event.date}` : event.date
@@ -65,16 +67,8 @@ const EventScreen = ({ event, onClose }) => {
   return (
     <div className='fixed inset-0 z-90 overflow-y-auto bg-[#f8fbfe]'>
       <div className='content-container py-8 md:py-12'>
-        <div className='mb-6 flex justify-end'>
-          <button
-            type='button'
-            onClick={onClose}
-            className='inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#c5d8e8] bg-white text-[#10263b] transition-colors duration-200 hover:bg-[#e8eff6]'
-            aria-label='Close event details'
-          >
-            <FaTimes />
-          </button>
-        </div>
+        
+        <Close onClose={onClose} ariaLabel={`Close ${event.title} details`} />
 
         <section className='rounded-3xl bg-white p-6 shadow-sm md:p-10'>
           <div className='flex flex-col gap-8 md:flex-row-reverse md:items-center'>
