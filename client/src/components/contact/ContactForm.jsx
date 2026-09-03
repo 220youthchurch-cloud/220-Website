@@ -44,7 +44,7 @@ const ContactForm = () => {
         <div aria-live='polite' className='mt-5 min-h-14'>
           {loading ? (
             <div className='flex items-center gap-3 rounded-2xl border border-[#c5d8e8] bg-[#f3f7fb] px-4 py-3 text-sm text-slate-700'>
-              <span className='inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#2c6598] shadow-sm'>
+              <span className='inline-flex h-9 w-9 items-center justify-center rounded-full bg-white primary-text shadow-sm'>
                 <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' fill='none' aria-hidden='true'>
                   <circle cx='12' cy='12' r='10' className='opacity-20' stroke='currentColor' strokeWidth='4' />
                   <path d='M22 12a10 10 0 0 0-10-10' className='opacity-80' stroke='currentColor' strokeWidth='4' strokeLinecap='round' />

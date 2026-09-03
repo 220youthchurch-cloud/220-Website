@@ -47,7 +47,7 @@ const ContactInfo = () => {
       <div className='space-y-4'>
         {contactDetails.map((contact) => (
           <div key={contact.title} className='flex items-start gap-4'>
-            <div className='flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#e8eff6] text-[#2c6598]'>
+            <div className='flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#e8eff6] primary-text'>
               {React.createElement(contact.icon, { className: 'h-6 w-6' })}
             </div>
 
@@ -59,7 +59,7 @@ const ContactInfo = () => {
                 className='group block'
               >
                 <h3 className='mb-1 font-semibold text-[#10263b]'>{contact.title}</h3>
-                <p className='text-slate-700 transition-colors group-hover:text-[#2c6598]'>
+                <p className='text-slate-700 transition-colors group-hover:primary-text'>
                   {contact.lines.map((line, index) => (
                     <React.Fragment key={line}>
                       {line}
@@ -68,7 +68,7 @@ const ContactInfo = () => {
                   ))}
                 </p>
                 {contact.actionText ? (
-                  <span className='mt-1 inline-block text-sm font-medium text-[#2c6598] transition-colors group-hover:text-[#1f5079]'>
+                  <span className='mt-1 inline-block text-sm font-medium primary-text transition-colors group-hover:text-[#1f5079]'>
                     {contact.actionText}
                   </span>
                 ) : null}

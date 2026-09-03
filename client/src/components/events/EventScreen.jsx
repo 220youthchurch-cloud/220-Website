@@ -108,7 +108,7 @@ const EventScreen = ({ event, onClose }) => {
           <div className='mt-10 grid gap-10 md:grid-cols-3'>
             <aside className='space-y-8 md:col-span-1'>
               <div>
-                <h2 className='header-font text-sm uppercase tracking-[0.12em] text-[#2c6598]'>
+                <h2 className='header-font text-sm uppercase tracking-[0.12em] primary-text'>
                   Past Dates
                 </h2>
                 <ul className='body-font mt-3 space-y-2 text-slate-700'>
@@ -117,7 +117,7 @@ const EventScreen = ({ event, onClose }) => {
               </div>
 
               <div>
-                <h2 className='header-font text-sm uppercase tracking-[0.12em] text-[#2c6598]'>
+                <h2 className='header-font text-sm uppercase tracking-[0.12em] primary-text'>
                   Location
                 </h2>
                 <p className='body-font mt-3 whitespace-pre-wrap text-slate-700'>

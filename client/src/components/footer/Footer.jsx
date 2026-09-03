@@ -9,14 +9,14 @@ const Footer = () => {
   const quickLinks = navLinks
 
   return (
-    <footer className='bg-[#10263b] text-[#f7f7f7]'>
+    <footer className='bg-[#10263b] secondary-text'>
       <div className='content-container py-16'>
         
         {/* Header */}
         <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between w-full gap-5 mb-10'>
           <Logo isOnDarkBackground={true} />
           <div className='flex flex-col sm:items-center lg: items-start'>
-            <p className='body-font text-[#f7f7f7] text-base leading-7'>Make Disciples<br/>Live the Mission</p>
+            <p className='body-font secondary-text text-base leading-7'>Make Disciples<br/>Live the Mission</p>
             <SocialMediaPlatforms size="sm" className='gap-3' displayTitle={false} />
           </div>
         </div>
@@ -27,7 +27,7 @@ const Footer = () => {
             <div key={page.to} className='min-w-0'>
               <Link
                 to={page.to}
-                className='header-font text-sm uppercase tracking-[0.12em] text-[#f7f7f7] hover:text-[#8fb8df] transition-colors duration-200'
+                className='header-font text-sm uppercase tracking-[0.12em] secondary-text hover:text-[#8fb8df] transition-colors duration-200'
               >
                 {page.label}
               </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
                     <li key={subsection.to}>
                       <Link
                         to={subsection.to}
-                        className='body-font text-sm text-[#f7f7f7]/70 hover:text-[#8fb8df] transition-colors duration-200'
+                        className='body-font text-sm secondary-text/70 hover:text-[#8fb8df] transition-colors duration-200'
                       >
                         {subsection.label}
                       </Link>
@@ -52,10 +52,10 @@ const Footer = () => {
         
         {/* Copyright */}
         <div className='pt-6 flex flex-row sm:flex-row sm:items-center gap-3'>
-          <p className='body-font text-sm text-[#f7f7f7]/80'>
+          <p className='body-font text-sm secondary-text/80'>
             © {new Date().getFullYear()} Gospel Light Eritrean Baptist Church -  220 Youth Group. All rights reserved.
           </p>
-          <p className='body-font text-sm text-[#f7f7f7]/70'>
+          <p className='body-font text-sm secondary-text/70'>
             Building disciples who live on mission.
           </p>
         </div>

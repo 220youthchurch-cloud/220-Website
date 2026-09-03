@@ -20,7 +20,7 @@ const Events = () => {
     `${
       viewMode === mode
         ? 'bg-[#2c6598] text-white border-[#2c6598]'
-        : 'bg-white text-[#2c6598] border-[#c5d8e8] hover:bg-[#e8eff6]'
+        : 'bg-white primary-text border-[#c5d8e8] hover:bg-[#e8eff6]'
     } header-font inline-flex items-center gap-2 rounded-full border px-5 py-2 text-sm uppercase tracking-wide transition-colors duration-200`
 
   return (

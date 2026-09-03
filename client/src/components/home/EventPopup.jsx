@@ -22,7 +22,7 @@ const EventPopup = () => {
     <SlideDown className='fixed top-35 left-1/2 z-40 w-11/12 max-w-xl -translate-x-1/2 rounded-2xl border border-slate-100 bg-white p-6 shadow-2xl md:p-8'>
       <Close onClose={() => setNextEvent(null)} ariaLabel='Close event popup' />
 
-      <h2 className='header-font text-sm uppercase tracking-[0.12em] text-[#2c6598]'>
+      <h2 className='header-font text-sm uppercase tracking-[0.12em] primary-text'>
         Upcoming Event
       </h2>
 

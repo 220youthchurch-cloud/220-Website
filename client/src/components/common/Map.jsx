@@ -27,10 +27,10 @@ const Map = () => {
         <Marker position={position} icon={mapIcon}>
           <Popup>
             <div className="text-center">
-              <h3 className="font-semibold text-[#2c6598] mb-1">
+              <h3 className="font-semibold primary-text mb-1">
                 Gospel Light Eritrean Baptist Church
               </h3>
-              <p className="text-sm text-[#2c6598] mb-2">
+              <p className="text-sm primary-text mb-2">
                 11110 Garland Rd<br />
                 Dallas, TX 75218
               </p>
