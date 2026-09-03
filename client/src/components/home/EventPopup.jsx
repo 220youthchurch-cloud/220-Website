@@ -40,6 +40,19 @@ const EventPopup = () => {
         dangerouslySetInnerHTML={{ __html: nextEvent.description || '' }}
       />
 
+      {nextEvent.registrationLink && nextEvent.registrationLink !== '' && (
+        <div className='mt-4'>
+          <a
+            href={nextEvent.registrationLink}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='btn-primary'
+          >
+            Register Now
+          </a>
+        </div>
+      )}
+
       <div className='mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4'>
         <p className='body-font text-sm text-slate-600'>{nextEvent.location}</p>
         {nextEvent.location && (

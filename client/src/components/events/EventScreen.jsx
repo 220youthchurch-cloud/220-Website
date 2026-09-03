@@ -136,6 +136,22 @@ const EventScreen = ({ event, onClose }) => {
                   </div>
                 )}
               </div>
+              
+              <div>
+                {event.registrationLink && (
+                  <div className='mt-4 flex flex-wrap gap-3'>
+                    <a
+                      href={event.registrationLink}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='btn-primary'
+                    >
+                      Register Now
+                    </a>
+                  </div>
+                )}
+              </div>
+
             </aside>
 
             <section className='md:col-span-2'>
