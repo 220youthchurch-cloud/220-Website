@@ -10,6 +10,7 @@ import MissionVision from './components/home/MissionVision'
 import Beliefs from './pages/Beliefs'
 import Serve from './pages/Serve'
 import Contact from './pages/Contact';
+import Give from './pages/Give'
 
 import ErrorPage from './pages/ErrorPage'
 
@@ -55,6 +56,10 @@ export const router = createBrowserRouter([
         path: 'contact',
         element: <Contact />
       },
+      {
+        path: 'give',
+        element: <Give />
+      }
     ],
   },
 ]);
