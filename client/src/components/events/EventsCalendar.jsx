@@ -74,7 +74,7 @@ const EventsCalendar = ({ events = [], onEventClick }) => {
       </div>
 
       <div>
-        <h3 className='header-font text-2xl text-[#10263b]'>
+        <h3 className='header-font text-2xl section-heading-text'>
           Events on{' '}
           {selectedDate.toLocaleDateString('en-US', {
             month: 'long',

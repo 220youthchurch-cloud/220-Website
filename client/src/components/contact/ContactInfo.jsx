@@ -37,7 +37,7 @@ const ContactInfo = () => {
   <div>
     <div className='space-y-8'>
       <div>
-        <h2 className='section-heading text-[#10263b]'>Get in Touch</h2>
+        <h2 className='section-heading section-heading-text'>Get in Touch</h2>
         <p className='section-body max-w-2xl'>
           We would love to hear from you. Whether you have questions about our services,
           want to learn more about our church, or need prayer, please reach out to us.
@@ -58,7 +58,7 @@ const ContactInfo = () => {
                 rel={contact.external ? 'noopener noreferrer' : undefined}
                 className='group block'
               >
-                <h3 className='mb-1 font-semibold text-[#10263b]'>{contact.title}</h3>
+                <h3 className='mb-1 font-semibold section-heading-text'>{contact.title}</h3>
                 <p className='text-slate-700 transition-colors group-hover:primary-text'>
                   {contact.lines.map((line, index) => (
                     <React.Fragment key={line}>
@@ -75,7 +75,7 @@ const ContactInfo = () => {
               </a>
             ) : (
               <div>
-                <h3 className='mb-1 font-semibold text-[#10263b]'>{contact.title}</h3>
+                <h3 className='mb-1 font-semibold section-heading-text'>{contact.title}</h3>
                 <p className='text-slate-700'>
                   {contact.lines.map((line, index) => (
                     <React.Fragment key={line}>
@@ -91,9 +91,9 @@ const ContactInfo = () => {
       </div>
 
       <div>
-        <h3 className='mb-4 font-semibold text-[#10263b]'>Follow Us</h3>
+        <h3 className='mb-4 font-semibold section-heading-text'>Follow Us</h3>
         <div className='flex flex-wrap gap-4'>
-          <SocialMediaPlatforms className='gap-2' buttonClassName='bg-[#2c6598] hover:text-black' displayTitle={false} />
+          <SocialMediaPlatforms className='gap-2' buttonClassName='primary-bg hover:text-black' displayTitle={false} />
         </div>
       </div>
     </div>

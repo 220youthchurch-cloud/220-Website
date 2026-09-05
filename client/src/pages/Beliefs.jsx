@@ -72,7 +72,7 @@ const Beliefs = () => {
       {/* Statement */}
       <FadeIn className='bg-white section-padding'>
         <div className='content-container'>
-          <h2 className='section-heading text-[#10263b] mb-6'>Statement of Faith</h2>
+          <h2 className='section-heading section-heading-text mb-6'>Statement of Faith</h2>
           <p className='section-body mt-8'>
             Every leader in 220 stands on the same foundation. The doctrines articulated below are not optional
             convictions or personal preferences — they are the essential truths of the historic Christian faith that
@@ -87,12 +87,12 @@ const Beliefs = () => {
       {/* Essential Beliefs */}
       <FadeIn className='bg-[#eef4fa] section-padding'>
         <div className='content-container'>
-          <h2 className='section-heading text-[#10263b] mb-10'>Essential Beliefs</h2>
+          <h2 className='section-heading section-heading-text mb-10'>Essential Beliefs</h2>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
             {beliefs.map((belief, index) => (
               <div key={index} className='border-l-4 border-[#2c6598] pl-6'>
-                <h3 className='font-[lato] text-xl md:text-2xl font-bold text-[#10263b] mb-3'>
+                <h3 className='font-[lato] text-xl md:text-2xl font-bold section-heading-text mb-3'>
                   {belief.title}
                 </h3>
                 <p className='body-font text-base md:text-lg leading-8 text-slate-700'>
@@ -107,7 +107,7 @@ const Beliefs = () => {
       {/* Our Posture as Leaders */}
       <FadeIn className='bg-white section-padding'>
         <div className='content-container'>
-          <h2 className='section-heading text-[#10263b] mb-6'>Our Posture as Leaders</h2>
+          <h2 className='section-heading section-heading-text mb-6'>Our Posture as Leaders</h2>
           <p className='section-body'>
             As a 220 leader, you are not required to teach systematic theology, but you are required to live, speak,
             and serve in alignment with the convictions above. If at any point your beliefs come to differ from what

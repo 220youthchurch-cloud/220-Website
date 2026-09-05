@@ -99,14 +99,14 @@ const Navbar = () => {
 
     return `${isActive
       ? 'bg-[#e8eff6] primary-text'
-      : 'text-[#10263b] hover:bg-[#e8eff6] hover:primary-text'
+      : 'section-heading-text hover:bg-[#e8eff6] hover:primary-text'
     } block rounded-md px-4 py-2 text-sm header-font transition-colors duration-200`
   }
 
   const mobileLinkClass = ({ isActive }) =>
     `${isActive
-      ? 'bg-[#2c6598] text-white'
-      : 'text-[#10263b] hover:bg-[#e8eff6]'
+      ? 'primary-bg text-white'
+      : 'section-heading-text hover:bg-[#e8eff6]'
     } header-font w-full rounded-xl px-5 py-4 text-left text-xl sm:text-2xl transition-colors duration-200`
 
   // Combine classes for the navbar shell
@@ -260,8 +260,8 @@ const Navbar = () => {
                             to={subsection.to}
                             className={({ isActive }) =>
                               `${isActive
-                                ? 'bg-[#2c6598] text-white'
-                                : 'text-[#10263b] hover:bg-[#e8eff6]'
+                                ? 'primary-bg text-white'
+                                : 'section-heading-text hover:bg-[#e8eff6]'
                               } header-font w-full rounded-lg px-4 py-3 text-left text-sm transition-colors duration-200`
                             }
                           >

@@ -19,7 +19,7 @@ const Events = () => {
   const viewButtonClass = (mode) =>
     `${
       viewMode === mode
-        ? 'bg-[#2c6598] text-white border-[#2c6598]'
+        ? 'primary-bg text-white border-[#2c6598]'
         : 'bg-white primary-text border-[#c5d8e8] hover:bg-[#e8eff6]'
     } header-font inline-flex items-center gap-2 rounded-full border px-5 py-2 text-sm uppercase tracking-wide transition-colors duration-200`
 
@@ -53,7 +53,7 @@ const Events = () => {
 
           {viewMode === 'list' ? (
             <div className='mt-8'>
-              <h2 className='section-heading text-[#10263b]'>Upcoming Events</h2>
+              <h2 className='section-heading section-heading-text'>Upcoming Events</h2>
               <p className='section-body mt-3'>
                 {upcomingEventsCount === 0
                   ? 'No events are currently scheduled.'

@@ -39,7 +39,7 @@ const HighlightCard = ({ title, imageUrl, to }) => {
         <h3 className='header-font text-2xl text-white'>{title}</h3>
         <Link
           to={to}
-          className='inline-flex items-center justify-center rounded-full border border-white/70 bg-white/20 px-5 py-2 font-[lato] text-sm font-bold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white hover:text-[#10263b]'
+          className='inline-flex items-center justify-center rounded-full border border-white/70 bg-white/20 px-5 py-2 font-[lato] text-sm font-bold text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white hover:section-heading-text'
         >
           learn more
         </Link>
