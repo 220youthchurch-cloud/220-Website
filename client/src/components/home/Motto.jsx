@@ -3,7 +3,7 @@ import FadeIn from "../common/FadeIn"
 
 const Motto = () => {
   return (
-    <FadeIn className='section-padding pt-1 bg-[#2c6598]'>
+    <FadeIn className='section-padding pt-1 primary-bg'>
       <div className='flex flex-col items-center text-center secondary-text gap-5 px-15'>
         <h1 className='header-font text-[50px] font-extrabold'>IDENTITY. COMMUNITY. PURPOSE.</h1>
         <p>This generation is being told a thousand stories about who they are — that their identity is in their performance, their followers, their grades, their relationships, their image. They are exhausted from carrying identities that were never meant to be theirs.</p>

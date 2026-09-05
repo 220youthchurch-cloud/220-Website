@@ -24,12 +24,24 @@
     @apply text-[#f7f7f7];
   }
 
+  .section-heading-text {
+    @apply text-[#10263b];
+  }
+
   /* fonts */
   .header-font {
     @apply font-[lato] font-bold;
   }
   .body-font {
     @apply font-[lora];
+  }
+
+  /* background colors */
+  .primary-bg {
+    @apply bg-[#2c6598];
+  }
+  .secondary-bg {
+    @apply bg-[#f7f7f7];
   }
 
   .section-heading {

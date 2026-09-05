@@ -20,7 +20,7 @@ const RoleCard = ({ onClick, role }) => {
             />
           </div>
           <div className='flex flex-col grow p-6'>
-            <h3 className='section-heading text-lg text-[#10263b] mb-3'>{role.title}</h3>
+            <h3 className='section-heading text-lg section-heading-text mb-3'>{role.title}</h3>
             <p className='section-body'>{role.description}</p>
           </div>
         </div>

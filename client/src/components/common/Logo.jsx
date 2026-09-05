@@ -14,7 +14,7 @@ const Logo = ({ isLarge = false, isOnDarkBackground = false }) => {
 
   const titleColorClass = isOnDarkBackground
     ? 'text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]'
-    : 'text-[#10263b]'
+    : 'section-heading-text'
 
   const subtitleColorClass = isOnDarkBackground
     ? 'text-white/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]'

@@ -51,7 +51,7 @@ const MissionVision = () => {
 
           <div className='md:order-2 flex min-h-80 items-center justify-center p-8 text-center md:min-h-120 md:p-14'>
             <div className='max-w-2xl'>
-              <h2 className='section-heading text-[#10263b]'>Our Mission</h2>
+              <h2 className='section-heading section-heading-text'>Our Mission</h2>
               <p className='section-body'>
                 220 is the Youth & Young Adults Ministry of Gospel Light Eritrean Church. Our name is drawn from Galatians 2:20 — a single verse that captures everything this ministry exists to proclaim: identity, death to self, the indwelling Christ, a life lived by faith, and a Savior who loved us and gave Himself for us.
               </p>
@@ -77,7 +77,7 @@ const MissionVision = () => {
 
           <div className='md:order-1 flex min-h-80 items-center justify-center p-8 text-center md:min-h-120 md:p-14'>
             <div className='max-w-2xl'>
-              <h2 className='section-heading text-[#10263b]'>Our Vision</h2>
+              <h2 className='section-heading section-heading-text'>Our Vision</h2>
               <p className='section-body'>
                 This generation is being told a thousand stories about who they are. They hear that their identity is in their performance, their followers, their grades, their relationships, their bodies, their ethnicity, their sexuality, their image. They are exhausted from carrying identities that were never meant to be theirs.
               </p>
@@ -95,14 +95,14 @@ const MissionVision = () => {
       {/* Core Values */}
       <FadeIn className='bg-white p-8 md:py-10'>
         <div className='content-container'>
-          <h2 className='section-heading text-center text-[#10263b] mb-12'>Four Truths Behind the Name</h2>
+          <h2 className='section-heading text-center section-heading-text mb-12'>Four Truths Behind the Name</h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {fourTruths.map((truth) => (
               <div key={truth.icon} className='text-center'>
-                <div className='mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#2c6598] text-white'>
+                <div className='mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full primary-bg text-white'>
                   <span className='text-2xl font-bold'>{truth.icon}</span>
                 </div>
-                <h3 className='section-heading text-lg text-[#10263b] mb-3'>{truth.title}</h3>
+                <h3 className='section-heading text-lg section-heading-text mb-3'>{truth.title}</h3>
                 <p className='section-body'>{truth.description}</p>
               </div>
             ))}

@@ -42,7 +42,7 @@ const EventsList = ({ events = [], emptyMessage = 'There are no events scheduled
               <span className='header-font rounded-full bg-[#e8eff6] px-3 py-1 text-sm uppercase tracking-wide primary-text'>
                 {event.category}
               </span>
-              <h3 className='header-font text-2xl text-[#10263b]'>{event.title}</h3>
+              <h3 className='header-font text-2xl section-heading-text'>{event.title}</h3>
             </div>
 
             <p className='body-font mt-4 flex items-center gap-2 text-slate-700'>

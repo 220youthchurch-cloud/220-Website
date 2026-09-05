@@ -26,7 +26,7 @@ const EventPopup = () => {
         Upcoming Event
       </h2>
 
-      <h1 className='header-font mt-1 text-2xl leading-tight text-[#10263b] md:text-3xl'>
+      <h1 className='header-font mt-1 text-2xl leading-tight section-heading-text md:text-3xl'>
         {nextEvent.title}
       </h1>
 
@@ -36,7 +36,7 @@ const EventPopup = () => {
       </div>
 
       <div
-        className='body-font mt-4 max-h-40 overflow-y-auto text-slate-700 leading-7 [&_h1]:header-font [&_h1]:mb-2 [&_h1]:text-lg [&_h1]:text-[#10263b] [&_p]:mb-3'
+        className='body-font mt-4 max-h-40 overflow-y-auto text-slate-700 leading-7 [&_h1]:header-font [&_h1]:mb-2 [&_h1]:text-lg [&_h1]:section-heading-text [&_p]:mb-3'
         dangerouslySetInnerHTML={{ __html: nextEvent.description || '' }}
       />
 

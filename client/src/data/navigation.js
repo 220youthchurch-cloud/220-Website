@@ -39,4 +39,8 @@ export const navLinks = [
     to: '/contact',
     label: 'Contact',
   },
+  {
+    to: '/give',
+    label: 'Give',
+  }
 ]
