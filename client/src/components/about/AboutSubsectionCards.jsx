@@ -73,7 +73,7 @@ const AboutSubsectionCards = () => {
                   </p>
 
                   {/* CTA */}
-                  <div className='inline-flex items-center primary-text font-[lato] font-bold group-hover:text-[#1f5079] transition-colors duration-200'>
+                  <div className='inline-flex items-center primary-text .header-font group-hover:text-[#1f5079] transition-colors duration-200'>
                     <span>Learn More</span>
                     <span className='ml-2 group-hover:translate-x-1 transition-transform duration-200'>→</span>
                   </div>

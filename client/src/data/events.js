@@ -13,7 +13,8 @@ export const events = [
     category: "Worship",
     recurring: true,
     isVideo: false,
-    mediaPath: "/events/sunday_worship_service/flyer.jpg"
+    mediaPath: "/events/sunday_worship_service/flyer.jpg",
+    registrationLink: null,
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ export const events = [
     category: "Fellowship",
     recurring: false,
     isVideo: false,
-    mediaPath: "/events/220_wilderness_camping_trip/flyer.jpg"
+    mediaPath: "/events/220_wilderness_camping_trip/flyer.jpg",
+    registrationLink: null,
   },
   {
     id: 3,
@@ -41,7 +43,8 @@ export const events = [
     category: "Conference",
     recurring: false,
     isVideo: true,
-    mediaPath: "/events/girls_conference/girls_conference.mp4"
+    mediaPath: "/events/girls_conference/girls_conference.mp4",
+    registrationLink: null,
   },
   {
     id: 4,
@@ -55,7 +58,8 @@ export const events = [
     category: "Conference",
     recurring: false,
     isVideo: false,
-    mediaPath: "/events/spring_conference_2025/flyer.jpg"
+    mediaPath: "/events/spring_conference_2025/flyer.jpg",
+    registrationLink: null,
   },
   {
     id: 5,
@@ -69,7 +73,8 @@ export const events = [
     category: "Recreation",
     recurring: false,
     isVideo: false,
-    mediaPath: "/events/basketball_tournament/flyer.jpg"
+    mediaPath: "/events/basketball_tournament/flyer.jpg",
+    registrationLink: null,
   },
   {
     id: 6,
@@ -83,7 +88,8 @@ export const events = [
     category: "Conference",
     recurring: false,
     isVideo: false,
-    mediaPath: "/events/consecrated_2025/flyer.jpg"
+    mediaPath: "/events/consecrated_2025/flyer.jpg",
+    registrationLink: null,
   },
   {
     id: 7,
@@ -97,7 +103,8 @@ export const events = [
     category: "Celebration",
     recurring: false,
     isVideo: false,
-    mediaPath: "/events/christmas_eve_2025/flyer.jpg"
+    mediaPath: "/events/christmas_eve_2025/flyer.jpg",
+    registrationLink: null,
   },
   {
     id: 8,
@@ -111,7 +118,8 @@ export const events = [
     category: "Celebration",
     recurring: false,
     isVideo: false,
-    mediaPath: "/events/new_years_eve_2026/flyer.jpg"
+    mediaPath: "/events/new_years_eve_2026/flyer.jpg",
+    registrationLink: null,
   },
   {
     id: 9,
@@ -125,7 +133,8 @@ export const events = [
     category: "Conference",
     recurring: false,
     isVideo: false,
-    mediaPath: "/events/spring_conference_2026/flyer.jpg"
+    mediaPath: "/events/spring_conference_2026/flyer.jpg",
+    registrationLink: null,
   },
   {
     id: 10,
@@ -139,7 +148,8 @@ export const events = [
     category: "Camp",
     recurring: false,
     isVideo: false,
-    mediaPath: "/events/summer_camp_2026/flyer.jpg"
+    mediaPath: "/events/summer_camp_2026/flyer.jpg",
+    registrationLink: null,
   },
   {
     id: 11,
@@ -153,7 +163,8 @@ export const events = [
     category: "Recreation",
     recurring: false,
     isVideo: false,
-    mediaPath: "/events/volleyball_tournament_2026/flyer.jpg"
+    mediaPath: "/events/volleyball_tournament_2026/flyer.jpg",
+    registrationLink: null
   },
   {
     id: 12,
@@ -167,7 +178,8 @@ export const events = [
     category: "Conference",
     recurring: false,
     isVideo: false,
-    mediaPath: "/events/no_other_gods_2026/flyer.jpg"
+    mediaPath: "/events/no_other_gods_2026/flyer.jpg",
+    registrationLink: "https://www.eventbrite.com/e/no-other-gods-conference-tickets-1998703548116?aff=oddtdtcreator"
   }
 ]
 

@@ -5,7 +5,7 @@ import SocialMediaPlatforms from '../common/SocialMediaPlatforms'
 
 const FollowUs = () => {
   return (
-    <FadeIn className='section-padding text-center text-[#f7f7f7] primary-bg'>
+    <FadeIn className='section-padding text-center secondary-text primary-bg'>
       <div className='flex flex-col gap-7 items-center'>
         <div>
           <h2 className='header-font text-[4rem]'>Follow Us</h2>
