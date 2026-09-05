@@ -66,7 +66,7 @@ const WhatIs220 = () => {
 
               <div className={`${index % 2 !== 0 ? 'md:order-1' : 'md:order-2'} flex min-h-80 items-center justify-center p-8 text-center md:min-h-120 md:p-14`}>
                 <div className='max-w-2xl'>
-                  <h2 className='section-heading text-[#10263b]'>{section.title}</h2>
+                  <h2 className='section-heading section-heading-text'>{section.title}</h2>
                   <div className='section-body'>{section.description}</div>
                 </div>
               </div>

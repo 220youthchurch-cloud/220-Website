@@ -1,5 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/common/PageHeader'
+import JoyOfGiving from '../components/give/JoyOfGiving'
+import WhyWeGive from '../components/give/WhyWeGive'
 import WaysToGive from '../components/give/WaysToGive'
 
 const Give = () => {
@@ -7,8 +9,10 @@ const Give = () => {
     <>
       <PageHeader
         title='Give'
-        description='Thank you for your generosity! Your contributions help us continue our mission and make a positive impact in our community.'
+        description='Thank you for your generosity in supporting the ministry of 220 Gospel Light.'
       />
+      <JoyOfGiving />
+      <WhyWeGive />
       <WaysToGive />
     </>
   )

@@ -40,7 +40,7 @@ const AboutSubsectionCards = () => {
     <FadeIn className='bg-[#f3f7fb] section-padding'>
       <div className='content-container'>
         <div className='text-center mb-16'>
-          <h2 className='section-heading text-[#10263b] mb-4'>Learn More About Us</h2>
+          <h2 className='section-heading section-heading-text mb-4'>Learn More About Us</h2>
           <p className='section-body max-w-2xl mx-auto'>
             Dive deeper into who we are, what we stand for, and where we're going as a faith community.
           </p>
@@ -64,8 +64,8 @@ const AboutSubsectionCards = () => {
                 {/* Content Section */}
                 <div className='flex flex-col grow p-6'>
                   <div className='text-4xl mb-3'>{section.icon}</div>
-                  <h3 className='header-font text-xl text-[#10263b] mb-2'>{section.title}</h3>
-                  <p className='header-font text-sm text-[#2c6598] mb-3 uppercase tracking-wide'>
+                  <h3 className='header-font text-xl section-heading-text mb-2'>{section.title}</h3>
+                  <p className='header-font text-sm primary-text mb-3 uppercase tracking-wide'>
                     {section.subtitle}
                   </p>
                   <p className='body-font text-sm text-slate-700 grow mb-4'>
@@ -73,7 +73,7 @@ const AboutSubsectionCards = () => {
                   </p>
 
                   {/* CTA */}
-                  <div className='inline-flex items-center text-[#2c6598] font-[lato] font-bold group-hover:text-[#1f5079] transition-colors duration-200'>
+                  <div className='inline-flex items-center primary-text font-[lato] font-bold group-hover:text-[#1f5079] transition-colors duration-200'>
                     <span>Learn More</span>
                     <span className='ml-2 group-hover:translate-x-1 transition-transform duration-200'>→</span>
                   </div>

@@ -39,19 +39,19 @@ const EventsList = ({ events = [], emptyMessage = 'There are no events scheduled
             className={`${onEventClick ? 'cursor-pointer hover:bg-[#f7fbff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2c6598]/40' : ''} w-full rounded-2xl p-6 text-left transition-colors duration-200`}
           >
             <div className='flex flex-wrap items-center gap-3'>
-              <span className='header-font rounded-full bg-[#e8eff6] px-3 py-1 text-sm uppercase tracking-wide text-[#2c6598]'>
+              <span className='header-font rounded-full bg-[#e8eff6] px-3 py-1 text-sm uppercase tracking-wide primary-text'>
                 {event.category}
               </span>
-              <h3 className='header-font text-2xl text-[#10263b]'>{event.title}</h3>
+              <h3 className='header-font text-2xl section-heading-text'>{event.title}</h3>
             </div>
 
             <p className='body-font mt-4 flex items-center gap-2 text-slate-700'>
-              <FaClock className='text-[#2c6598]' aria-hidden='true' />
+              <FaClock className='primary-text' aria-hidden='true' />
               <span>{formatTime(event)}</span>
             </p>
 
             <p className='body-font mt-2 flex items-center gap-2 text-slate-700'>
-              <FaLocationDot className='text-[#2c6598]' aria-hidden='true' />
+              <FaLocationDot className='primary-text' aria-hidden='true' />
               <span>{event.location || 'Location TBD'}</span>
             </p>
 

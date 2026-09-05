@@ -82,7 +82,7 @@ const RecentSermons = () => {
                 </div>
 
                 <div className='flex flex-1 flex-col p-5'>
-                  <h3 className='header-font text-lg text-[#10263b] line-clamp-2'>
+                  <h3 className='header-font text-lg section-heading-text line-clamp-2'>
                     {sermon.title}
                   </h3>
                   <p className='mt-3 body-font text-sm text-slate-600'>

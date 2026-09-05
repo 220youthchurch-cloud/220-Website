@@ -16,7 +16,7 @@ const AboutIntro = () => {
           </div>
 
           <div>
-            <h2 className='section-heading text-[#10263b] mb-6'>Who We Are</h2>
+            <h2 className='section-heading section-heading-text mb-6'>Who We Are</h2>
             <p className='section-body mb-6'>
               220 For Life is more than just a church—we're a family united by faith in Jesus Christ and a commitment to serving our community with love and purpose. We believe that every person has value, every story matters, and every life can be transformed through the power of God's grace.
             </p>

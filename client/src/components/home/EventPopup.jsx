@@ -22,11 +22,11 @@ const EventPopup = () => {
     <SlideDown className='fixed top-35 left-1/2 z-40 w-11/12 max-w-xl -translate-x-1/2 rounded-2xl border border-slate-100 bg-white p-6 shadow-2xl md:p-8'>
       <Close onClose={() => setNextEvent(null)} ariaLabel='Close event popup' />
 
-      <h2 className='header-font text-sm uppercase tracking-[0.12em] text-[#2c6598]'>
+      <h2 className='header-font text-sm uppercase tracking-[0.12em] primary-text'>
         Upcoming Event
       </h2>
 
-      <h1 className='header-font mt-1 text-2xl leading-tight text-[#10263b] md:text-3xl'>
+      <h1 className='header-font mt-1 text-2xl leading-tight section-heading-text md:text-3xl'>
         {nextEvent.title}
       </h1>
 
@@ -36,7 +36,7 @@ const EventPopup = () => {
       </div>
 
       <div
-        className='body-font mt-4 max-h-40 overflow-y-auto text-slate-700 leading-7 [&_h1]:header-font [&_h1]:mb-2 [&_h1]:text-lg [&_h1]:text-[#10263b] [&_p]:mb-3'
+        className='body-font mt-4 max-h-40 overflow-y-auto text-slate-700 leading-7 [&_h1]:header-font [&_h1]:mb-2 [&_h1]:text-lg [&_h1]:section-heading-text [&_p]:mb-3'
         dangerouslySetInnerHTML={{ __html: nextEvent.description || '' }}
       />
 

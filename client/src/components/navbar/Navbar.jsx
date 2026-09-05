@@ -85,7 +85,7 @@ const Navbar = () => {
 
     return `${isActive
       ? 'primary-text pb-2 border-b-[3px] border-[#2c6598] px-3'
-      : 'text-black hover:text-[#2c6598] hover:border-b-[3px] border-[#f7f7f7] pb-2 px-4'
+      : 'text-black hover:primary-text hover:border-b-[3px] border-[#f7f7f7] pb-2 px-4'
     } transition-all duration-300 ease-in-out`
   }
 
@@ -98,15 +98,15 @@ const Navbar = () => {
     }
 
     return `${isActive
-      ? 'bg-[#e8eff6] text-[#2c6598]'
-      : 'text-[#10263b] hover:bg-[#e8eff6] hover:text-[#2c6598]'
+      ? 'bg-[#e8eff6] primary-text'
+      : 'section-heading-text hover:bg-[#e8eff6] hover:primary-text'
     } block rounded-md px-4 py-2 text-sm header-font transition-colors duration-200`
   }
 
   const mobileLinkClass = ({ isActive }) =>
     `${isActive
-      ? 'bg-[#2c6598] text-white'
-      : 'text-[#10263b] hover:bg-[#e8eff6]'
+      ? 'primary-bg text-white'
+      : 'section-heading-text hover:bg-[#e8eff6]'
     } header-font w-full rounded-xl px-5 py-4 text-left text-xl sm:text-2xl transition-colors duration-200`
 
   // Combine classes for the navbar shell
@@ -137,7 +137,7 @@ const Navbar = () => {
               aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               className={`${isTransparentTopMode
                 ? 'border-white/60 text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]'
-                : 'border-[#2c6598]/30 text-[#2c6598]'
+                : 'border-[#2c6598]/30 primary-text'
               } md:hidden relative inline-flex h-11 w-11 items-center justify-center rounded-lg`}
             >
               <span
@@ -232,7 +232,7 @@ const Navbar = () => {
                       }
                       aria-expanded={openMobileSubmenu === link.to}
                       aria-label={`Toggle ${link.label} subsections`}
-                      className='inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[#c5d8e8] text-[#2c6598] transition-colors duration-200 hover:bg-[#e8eff6]'
+                      className='inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[#c5d8e8] primary-text transition-colors duration-200 hover:bg-[#e8eff6]'
                     >
                       <FaAngleDown
                         className={`text-xl transition-transform duration-200 ${
@@ -260,8 +260,8 @@ const Navbar = () => {
                             to={subsection.to}
                             className={({ isActive }) =>
                               `${isActive
-                                ? 'bg-[#2c6598] text-white'
-                                : 'text-[#10263b] hover:bg-[#e8eff6]'
+                                ? 'primary-bg text-white'
+                                : 'section-heading-text hover:bg-[#e8eff6]'
                               } header-font w-full rounded-lg px-4 py-3 text-left text-sm transition-colors duration-200`
                             }
                           >

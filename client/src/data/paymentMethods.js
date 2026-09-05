@@ -1,14 +1,6 @@
 export const paymentMethods = [
   {
-    method: "Paypal",
-    link: "https://www.paypal.com/donate?hosted_button_id=3Z7X5K2Y6V9J8",
+    method: "Give Online",
+    link: "https://give.tithe.ly/?formId=59af0c1d-2895-4dc9-82e6-5ab66f56dd70",
   },
-  {
-    method: "Zelle",
-    link: "https://www.zellepay.com/",
-  },
-  {
-    method: "CashApp",
-    link: "https://cash.app/$220ForLife",
-  },
-];
+]

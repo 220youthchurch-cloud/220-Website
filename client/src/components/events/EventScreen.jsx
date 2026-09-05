@@ -97,7 +97,7 @@ const EventScreen = ({ event, onClose }) => {
             </div>
 
             <div className='md:w-[54%] md:pr-8'>
-              <h1 className='header-font text-4xl leading-tight text-[#10263b] md:text-5xl'>
+              <h1 className='header-font text-4xl leading-tight section-heading-text md:text-5xl'>
                 {event.title}
               </h1>
               <p className='body-font mt-4 text-lg text-slate-700'>{formatDateLabel(event)}</p>
@@ -108,7 +108,7 @@ const EventScreen = ({ event, onClose }) => {
           <div className='mt-10 grid gap-10 md:grid-cols-3'>
             <aside className='space-y-8 md:col-span-1'>
               <div>
-                <h2 className='header-font text-sm uppercase tracking-[0.12em] text-[#2c6598]'>
+                <h2 className='header-font text-sm uppercase tracking-[0.12em] primary-text'>
                   Past Dates
                 </h2>
                 <ul className='body-font mt-3 space-y-2 text-slate-700'>
@@ -117,7 +117,7 @@ const EventScreen = ({ event, onClose }) => {
               </div>
 
               <div>
-                <h2 className='header-font text-sm uppercase tracking-[0.12em] text-[#2c6598]'>
+                <h2 className='header-font text-sm uppercase tracking-[0.12em] primary-text'>
                   Location
                 </h2>
                 <p className='body-font mt-3 whitespace-pre-wrap text-slate-700'>
@@ -139,9 +139,9 @@ const EventScreen = ({ event, onClose }) => {
             </aside>
 
             <section className='md:col-span-2'>
-              <h2 className='header-font text-3xl text-[#10263b]'>Details</h2>
+              <h2 className='header-font text-3xl section-heading-text'>Details</h2>
               <div
-                className='mt-4 body-font leading-8 text-slate-700 [&_h1]:header-font [&_h1]:mb-4 [&_h1]:text-2xl [&_h1]:text-[#10263b] [&_p]:mb-4'
+                className='mt-4 body-font leading-8 text-slate-700 [&_h1]:header-font [&_h1]:mb-4 [&_h1]:text-2xl [&_h1]:section-heading-text [&_p]:mb-4'
                 dangerouslySetInnerHTML={{ __html: detailsMarkup }}
               />
             </section>
